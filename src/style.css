@@ -1,0 +1,21 @@
+@import 'bulma.min.css';
+
+:root {
+    /*--background: '#001C37';*/
+    --background: '#092541';
+    --on-background: '#D2E4FF';
+    --surface: '#001C37';
+    --surface1: '#092541';
+    --on-surface: '#D2E4FF';
+}
+
+.header {
+    background-color: var(--background);
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo{
+    max-width: 500px;
+}

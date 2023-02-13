@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+// Set your brand colors
+//$seed: #8A4D76;
+//$pink: #FA7C91;
+//$brown: #757763;
+//$beige-light: #D0D1CD;
+//$beige-lighter: #EFF0EB;
+//
+//// Update Bulma's global variables
+//$family-sans-serif: "Roboto", sans-serif;
+//$grey-dark: $brown;
+//$grey-light: $beige-light;
+//$primary: '#222A45';
+//$link: $pink;
+//$widescreen-enabled: false;
+//$fullhd-enabled: false;
+
+$background: '#001C37';
+$on-background: '#D2E4FF';
+$surface: '#001C37';
+$surface1: '#092541';
+$on-surface: '#D2E4FF';
+
+// Update some of Bulma's component variables
+$body-background-color: '#F3F3FA';
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Import only what you need from Bulma
+@import "~bulma/sass/utilities/_all.sass";
+@import "~bulma/sass/base/_all.sass";
+@import "~bulma/sass/elements/button.sass";
+@import "~bulma/sass/elements/container.sass";
+@import "~bulma/sass/elements/title.sass";
+@import "~bulma/sass/form/_all.sass";
+@import "~bulma/sass/components/navbar.sass";
+@import "~bulma/sass/layout/hero.sass";
+@import "~bulma/sass/layout/section.sass";
+
+//.background {
+//  background-color: $background;
+//}
+//
+//.surface1{
+//  background-color: $surface1;
+//}
