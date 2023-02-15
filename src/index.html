@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nostros, a nostr client in Android</title>
-<!--    <link rel="stylesheet" href="css/styles.css">-->
+    <!--    <link rel="stylesheet" href="css/styles.css">-->
 </head>
 <body>
 <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
@@ -27,9 +27,9 @@
             <a class="navbar-item">
                 Home
             </a>
-<!--            <div class="navbar-item">-->
-<!--                <iframe src="https://ghbtns.com/github-btn.html?user=KoalaSat&repo=nostros&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>-->
-<!--            </div>-->
+            <!--            <div class="navbar-item">-->
+            <!--                <iframe src="https://ghbtns.com/github-btn.html?user=KoalaSat&repo=nostros&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>-->
+            <!--            </div>-->
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">
                     More
@@ -50,7 +50,7 @@
         </div>
     </div>
 </nav>
-<header class="header has-background-dark">
+<header class="home-header header has-background-theme-background">
     <div class="container">
         <div class="columns is-centered">
             <div class="column is-narrow">
@@ -60,43 +60,44 @@
         </div>
         <div class="columns is-centered has-text-centered mb-6">
             <div class="column is-half">
-                <h1 class="title is-2 has-text-white has-text-weight-bold">Cliente de nostr para Android</h1>
-                <h2 class="subtitle is-5 has-text-white has-text-weight-light">nostr es un protocolo que permite crear una red social sin
+                <h1 class="title is-2 has-text-theme-on-background has-text-weight-bold">Cliente de nostr para Android</h1>
+                <h2 class="subtitle is-5 has-text-theme-on-background has-text-weight-light">nostr es un protocolo que permite crear
+                    una red social sin
                     censura, descentralizada, sin anuncios.</h2>
             </div>
         </div>
         <div class="tags are-medium is-centered">
-            <span class="tag is-rounded is-dark">
+            <span class="tag is-rounded is-theme-surface">
                 <span class="material-symbols-outlined">&#xe1a0;</span>
                 <span>&nbsp;Groups</span>
             </span>
-            <span class="tag is-rounded is-dark">
+            <span class="tag is-rounded is-theme-surface">
                 <span class="material-symbols-outlined">&#xe1d3;</span>
                 <span>&nbsp;Reactions</span>
             </span>
-            <span class="tag is-rounded is-dark">
+            <span class="tag is-rounded is-theme-surface">
                 <span class="material-symbols-outlined">&#xe86a;</span>
                 <span>&nbsp;Repost</span>
             </span>
-            <span class="tag is-rounded is-dark">
+            <span class="tag is-rounded is-theme-surface">
                 <span class="material-symbols-outlined">&#xef6c;</span>
                 <span>&nbsp;Comments</span>
             </span>
-            <span class="tag is-rounded is-dark">
+            <span class="tag is-rounded is-theme-surface">
                 <span class="material-symbols-outlined">&#xef76;</span>
                 <span>&nbsp;NIP-05</span>
             </span>
-            <span class="tag is-rounded is-dark">
+            <span class="tag is-rounded is-theme-surface">
                 <span class="material-symbols-outlined">&#xe0e6;</span>
                 <span>&nbsp;Mentions</span>
             </span>
-            <span class="tag is-rounded is-dark">
+            <span class="tag is-rounded is-theme-surface">
                 <span class="material-symbols-outlined has-text-warning">&#xec1c;</span>
                 <span>&nbsp;Tips</span>
             </span>
         </div>
         <div class="tags are-medium is-centered">
-            <span class="tag is-rounded is-success">
+            <span class="tag is-rounded is-theme-success-container">
                 <span class="material-symbols-outlined">&#xf0c1;</span>
                 <span>&nbsp;Relay friendly</span>
             </span>
@@ -109,8 +110,18 @@
                 </a>
             </div>
         </div>
+        <div class="buttons hero-buttons">
+            <a href="https://apt.izzysoft.de/fdroid/index/apk/com.nostros" class="button is-large is-rounded is-dark"
+               target="_blank">Github</a>
+            <a href="https://github.com/KoalaSat/nostros" class="button is-large is-rounded is-success" target="_blank">
+                <img class="is-responsive has-ratio" width="24" height="24" src="./images/iso_fdroid.svg" alt="">
+                &nbsp;
+                F-Droid
+            </a>
+        </div>
     </div>
 </header>
+
 <section class="section is-medium">
     <div class="container">
         <div class="columns is-vcentered">
@@ -133,7 +144,8 @@
             </div>
             <div class="column">
                 <p class="mb-2"><b>Chat público en nostr</b></p>
-                <pre class="copy" data-clipboard-text="8d37308d97356600f67a28039d598a52b8c4fa1b73ef6f2e7b7d40197c3afa56">8d37308d97356600f67a28039d598a52b8c4fa1b73ef6f2e7b7d40197c3afa56</pre>
+                <pre class="copy"
+                     data-clipboard-text="8d37308d97356600f67a28039d598a52b8c4fa1b73ef6f2e7b7d40197c3afa56">8d37308d97356600f67a28039d598a52b8c4fa1b73ef6f2e7b7d40197c3afa56</pre>
             </div>
         </div>
     </div>
@@ -146,12 +158,12 @@
         <div class="columns is-centered">
             <div class="column is-half-desktop is-narrow">
                 <table class="table is-narrow">
-<!--                    <thead>-->
-<!--                    <tr>-->
-<!--                        <th><abbr title="Position">Función</abbr></th>-->
-<!--                        <th>Team</th>-->
-<!--                    </tr>-->
-<!--                    </thead>-->
+                    <!--                    <thead>-->
+                    <!--                    <tr>-->
+                    <!--                        <th><abbr title="Position">Función</abbr></th>-->
+                    <!--                        <th>Team</th>-->
+                    <!--                    </tr>-->
+                    <!--                    </thead>-->
                     <tbody>
                     <tr>
                         <th>Public chats</th>
@@ -169,7 +181,8 @@
     <div class="container">
         <div class="columns is-flex-direction-row-reverse is-vcentered">
             <div class="column is-half-desktop">
-                <h3 class="title is-3 mb-6 has-text-weight-bold">Experimenta, por primera, vez la libertad de expresión y la privacidad en una red
+                <h3 class="title is-3 mb-6 has-text-weight-bold">Experimenta, por primera, vez la libertad de expresión
+                    y la privacidad en una red
                     social.</h3>
                 <h4 class="subtitle is-5">Únete a la comunidad Nostros hoy y ayuda a crear un futuro más libre y sin
                     censura en internet.</h4>
@@ -186,7 +199,8 @@
     <div class="container">
         <div class="columns is-vcentered">
             <div class="column is-half-desktop">
-                <img class="fdroid is-responsive has-ratio" width="500" height="500" src="./images/iso_fdroid.svg" alt="">
+                <img class="fdroid is-responsive has-ratio" width="500" height="500" src="./images/iso_fdroid.svg"
+                     alt="">
             </div>
             <div class="column is-half-desktop">
                 <div class="content is-medium">
@@ -194,7 +208,8 @@
                     <h4 class="subtitle is-5">FOSS - Free Open Source Software</h4>
                     <p>Nostros es un proyecto open source, se distribuye con una licencia que permite a los usuarios
                         utilizar, modificar y distribuir el código fuente de forma gratuita y sin restricciones.</p>
-                    <p>Si te apetece colaborar con Nostros puedes hacerlo de muchas maneras diferentes: programando, traduciendo, diseñando o simplemente dando feedback.</p>
+                    <p>Si te apetece colaborar con Nostros puedes hacerlo de muchas maneras diferentes: programando,
+                        traduciendo, diseñando o simplemente dando feedback.</p>
                     <p class="has-text-weight-semibold mb-6">Descarga la app de Nostros en F-Droid o desde GitHub.</p>
                 </div>
                 <div class="field is-grouped is-grouped-multiline">
@@ -221,14 +236,16 @@
                     <div class="control">
                         <div class="tags has-addons">
                             <span class="tag is-dark">on</span>
-                            <a href="https://github.com/KoalaSat/nostros" target="_blank" class="tag is-primary is-link">GitHub</a>
+                            <a href="https://github.com/KoalaSat/nostros" target="_blank"
+                               class="tag is-primary is-link">GitHub</a>
                         </div>
                     </div>
 
                     <div class="control">
                         <div class="tags has-addons">
                             <span class="tag is-dark">on</span>
-                            <a href="https://apt.izzysoft.de/fdroid/index/apk/com.nostros" target="_blank" class="tag is-success is-link">Fdroid</a>
+                            <a href="https://apt.izzysoft.de/fdroid/index/apk/com.nostros" target="_blank"
+                               class="tag is-success is-link">Fdroid</a>
                         </div>
                     </div>
                 </div>
@@ -242,9 +259,11 @@
         <div class="columns is-centered">
             <div class="column is-half-desktop">
                 <h3 class="title is-3 has-text-white">Apoya el proyecto con satoshis</h3>
-                <p class="mb-4">Todos los fondos recibidos se destinarán únicamente al desarrollo y mejora de Nostros.</p>
+                <p class="mb-4">Todos los fondos recibidos se destinarán únicamente al desarrollo y mejora de
+                    Nostros.</p>
                 <p class="subtitle mb-6 is-4 has-text-white"><b>¡Gracias por tu apoyo!</b></p>
-                <img class="is-responsive mb-6" width="291" height="162" src="./images/bitcoin_and_lightning.svg" alt="">
+                <img class="is-responsive mb-6" width="291" height="162" src="./images/bitcoin_and_lightning.svg"
+                     alt="">
                 <div class="columns has-text-left">
                     <div class="column">
                         <p class="mb-2"><b>Dirección Bitcoin</b></p>
