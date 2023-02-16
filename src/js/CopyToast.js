@@ -4,9 +4,6 @@ import Toastify from 'toastify-js';
 class CopyToast {
     constructor(element) {
         this.clipboard = new ClipboardJS(element);
-    }
-
-    init() {
         this.clipboard.on('success', (event) => {
             this.showToast(event);
             event.clearSelection();

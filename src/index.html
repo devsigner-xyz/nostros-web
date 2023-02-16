@@ -54,43 +54,68 @@
         <div class="columns is-centered has-text-centered mb-6">
             <div class="column is-three-quarters-desktop">
                 <div class="block">
-                    <h1 class="title is-2 has-text-theme-on-background has-text-weight-bold">Cliente de nostr para Android</h1>
+                    <h1 class="title is-2 has-text-weight-bold">Cliente de nostr para Android</h1>
                 </div>
                 <div class="block">
-                    <h2 class="subtitle is-5 has-text-theme-on-background has-text-weight-light">nostr es un protocolo que permite crear una red social sin censura, descentralizada, sin anuncios.</h2>
+                    <h2 class="subtitle is-5 has-text-weight-light">nostr es un protocolo que permite crear una red social sin censura, descentralizada, sin anuncios.</h2>
                 </div>
             </div>
         </div>
-        <div class="tags are-medium is-centered">
-            <span class="tag is-rounded is-theme-surface1">
-                <span class="material-symbols-outlined">&#xe1a0;</span>
-                <span>&nbsp;Groups</span>
-            </span>
-            <span class="tag is-rounded is-theme-surface1">
-                <span class="material-symbols-outlined">&#xe1d3;</span>
-                <span>&nbsp;Reactions</span>
-            </span>
-            <span class="tag is-rounded is-theme-surface1">
-                <span class="material-symbols-outlined">&#xe86a;</span>
-                <span>&nbsp;Repost</span>
-            </span>
-            <span class="tag is-rounded is-theme-surface1">
-                <span class="material-symbols-outlined">&#xef6c;</span>
-                <span>&nbsp;Comments</span>
-            </span>
-            <span class="tag is-rounded is-theme-surface1">
-                <span class="material-symbols-outlined">&#xef76;</span>
-                <span>&nbsp;NIP-05</span>
-            </span>
-            <span class="tag is-rounded is-theme-surface1">
-                <span class="material-symbols-outlined">&#xe0e6;</span>
-                <span>&nbsp;Mentions</span>
-            </span>
-            <span class="tag is-rounded is-theme-surface1">
-                <span class="material-symbols-outlined has-text-bitcoin">&#xec1c;</span>
-                <span>&nbsp;Tips</span>
-            </span>
+
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="column is-justify-content-center is-flex">
+                        <img class="header__note-image" src="./images/note-header.svg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="column is-justify-content-center is-flex">
+                        <img class="header__note-image" src="./images/note-header.svg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="column is-justify-content-center is-flex">
+                        <img class="header__note-image" src="./images/note-header.svg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="column is-justify-content-center is-flex">
+                        <img class="header__note-image" src="./images/note-header.svg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="column is-justify-content-center is-flex">
+                        <img class="header__note-image" src="./images/note-header.svg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="column is-justify-content-center is-flex">
+                        <img class="header__note-image" src="./images/note-header.svg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="column is-justify-content-center is-flex">
+                        <img class="header__note-image" src="./images/note-header.svg" alt="">
+                    </div>
+                </div>
+                ...
+            </div>
+
+            <div id="swiper-pagination" class="tags are-medium is-centered"></div>
+
+
+<!--            &lt;!&ndash; If we need navigation buttons &ndash;&gt;-->
+<!--            <div class="swiper-button-prev"></div>-->
+<!--            <div class="swiper-button-next"></div>-->
+
+<!--            &lt;!&ndash; If we need scrollbar &ndash;&gt;-->
+<!--            <div class="swiper-scrollbar"></div>-->
         </div>
+
         <div class="tags are-medium is-centered">
             <span class="tag is-rounded is-theme-success-container">
                 <span class="material-symbols-outlined">&#xf0c1;</span>
@@ -115,9 +140,7 @@
 <!--                F-Droid-->
 <!--            </a>-->
 <!--        </div>-->
-        <div class="column is-justify-content-center is-flex">
-            <img class="header__note-image" src="./images/note-header.svg" alt="">
-        </div>
+
     </div>
 </header>
 
@@ -393,3 +416,51 @@
 <script type="text/javascript" src="bundle.js"></script>
 </body>
 </html>
+
+
+<!-- If we need pagination -->
+<!--            <div id="swiper-pagination-custom" class="tags are-medium is-centered">-->
+<!--                <div class="swiper-pagination-custom-item swiper-pagination-custom-item-active">-->
+<!--                    <span class="tag is-rounded is-theme-surface1 ">-->
+<!--                        <span class="material-symbols-outlined">&#xe1a0;</span>-->
+<!--                        <span>&nbsp;Groups</span>-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--                <div class="swiper-pagination-custom-item swiper-pagination-custom-item-active">-->
+<!--                    <span class="tag is-rounded is-theme-surface1 swiper-pagination-custom-item">-->
+<!--                        <span class="material-symbols-outlined">&#xe1d3;</span>-->
+<!--                        <span>&nbsp;Reactions</span>-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--                <div class="swiper-pagination-custom-item swiper-pagination-custom-item-active">-->
+<!--                    <span class="tag is-rounded is-theme-surface1 swiper-pagination-custom-item">-->
+<!--                        <span class="material-symbols-outlined">&#xe86a;</span>-->
+<!--                        <span>&nbsp;Repost</span>-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--                <div class="swiper-pagination-custom-item swiper-pagination-custom-item-active">-->
+<!--                    <span class="tag is-rounded is-theme-surface1 swiper-pagination-custom-item">-->
+<!--                        <span class="material-symbols-outlined">&#xef6c;</span>-->
+<!--                        <span>&nbsp;Comments</span>-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--                <div class="swiper-pagination-custom-item swiper-pagination-custom-item-active">-->
+<!--                    <span class="tag is-rounded is-theme-surface1 swiper-pagination-custom-item">-->
+<!--                        <span class="material-symbols-outlined">&#xef76;</span>-->
+<!--                        <span>&nbsp;NIP-05</span>-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--                <div class="swiper-pagination-custom-item swiper-pagination-custom-item-active">-->
+<!--                    <span class="tag is-rounded is-theme-surface1 swiper-pagination-custom-item">-->
+<!--                        <span class="material-symbols-outlined">&#xe0e6;</span>-->
+<!--                        <span>&nbsp;Mentions</span>-->
+<!--                    </span>-->
+<!--                </div>-->
+
+<!--                <div class="swiper-pagination-custom-item swiper-pagination-custom-item-active">-->
+<!--                    <span class="tag is-rounded is-theme-surface1 swiper-pagination-custom-item">-->
+<!--                        <span class="material-symbols-outlined has-text-bitcoin">&#xec1c;</span>-->
+<!--                        <span>&nbsp;Tips</span>-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--            </div>-->

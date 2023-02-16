@@ -1,6 +1,7 @@
 @import "bulma/sass/utilities/initial-variables";
 @import "bulma/sass/utilities/functions";
-@import "toastify-js/src/toastify.css";
+@import "~toastify-js/src/toastify.css";
+@import 'swiper/swiper-bundle.min.css';
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 
@@ -51,18 +52,17 @@ $input-shadow: none;
 
 $addColors: (
         "theme-background":($theme-background, $theme-on-background),
-        "theme-on-background":($theme-on-background, $red), // revisar el color del texto
+        "theme-on-background":($theme-on-background, $theme-on-background), // revisar el color del texto
         "theme-surface":($theme-surface, $theme-on-surface),
         "theme-surface1":($theme-surface1, $theme-on-surface),
         "theme-surface2":($theme-surface2, $theme-on-surface),
         "theme-surface3":($theme-surface3, $theme-on-surface),
-        "theme-on-surface":($theme-on-surface, $theme-surface),
+        "theme-on-surface":($theme-on-surface, $theme-on-surface),
         "theme-success-container":($theme-success-container, $theme-on-success-container),
-        "theme-on-success-container":($theme-on-success-container, $theme-on-surface),
+        "theme-on-success-container":($theme-on-success-container, $theme-on-success-container),
         "theme-inverse-surface":($theme-inverse-surface, $primary),
-        "theme-neutral":($theme-neutral, $white),
         "theme-tertiary":($theme-tertiary, $theme-on-tertiary),
-        "theme-on-tertiary":($theme-on-tertiary, $primary),
+        "theme-on-tertiary":($theme-on-tertiary, $theme-on-tertiary),
         "theme-secondary-container":($theme-secondary-container, $theme-on-secondary-container),
         "theme-on-secondary-container":($theme-on-secondary-container, $theme-on-secondary-container),
         "bitcoin": ($bitcoin, $black),
@@ -118,4 +118,123 @@ $colors: map-merge($colors, $addColors);
 
 }
 
+.swiper {
+  width: 600px;
+  //height: 300px;
+}
 
+.header-carousel-bullet {
+  cursor: pointer;
+}
+
+
+//$nostr-sys-light-on-error: #FFFFFF;
+//$nostr-sys-light-error-container: #FFDAD6;
+//$nostr-sys-light-on-tertiary-container: #3D0025;
+//$nostr-sys-light-on-tertiary: #FFFFFF;
+//$nostr-sys-light-tertiary-container: #FFD8E7;
+//$nostr-sys-light-tertiary: #9D396F;
+//$nostr-sys-light-error: #BA1A1A;
+//$nostr-sys-light-outline: #767680;
+//$nostr-sys-light-on-background: #001C37;
+//$nostr-sys-light-background: #FDFCFF;
+//$nostr-sys-light-on-surface-variant: #45464F;
+//$nostr-sys-light-on-surface: #001C37;
+//$nostr-sys-light-surface-variant: #E2E1EC;
+//$nostr-sys-light-surface: #FDFCFF;
+//$nostr-sys-light-on-secondary-container: #001C37;
+//$nostr-sys-light-on-secondary: #FFFFFF;
+//$nostr-sys-light-secondary-container: #D2E4FF;
+//$nostr-sys-light-secondary: #0E61A4;
+//$nostr-sys-light-on-primary-container: #00164D;
+//$nostr-sys-light-on-primary: #FFFFFF;
+//$nostr-sys-light-primary-container: #DCE1FF;
+//$nostr-sys-light-primary: #405AA9;
+//$nostr-sys-dark-on-error-container: #FFDAD6;
+//$nostr-sys-dark-on-error: #690005;
+//$nostr-sys-dark-error-container: #93000A;
+//$nostr-sys-dark-on-tertiary-container: #FFD8E7;
+//$nostr-sys-dark-on-tertiary: #62023F;
+//$nostr-sys-dark-tertiary-container: #7F2056;
+//$nostr-sys-dark-tertiary: #FFAFD2;
+//$nostr-sys-dark-error: #FFB4AB;
+//$nostr-sys-dark-outline: #8F909A;
+//$nostr-sys-dark-on-background: #D2E4FF;
+//$nostr-sys-dark-background: #001C37;
+//$nostr-sys-dark-on-surface-variant: #C6C6D0;
+//$nostr-sys-dark-on-surface: #D2E4FF;
+//$nostr-sys-dark-surface-variant: #45464F;
+//$nostr-sys-dark-surface: #001C37;
+//$nostr-sys-dark-on-secondary-container: #D2E4FF;
+//$nostr-sys-dark-on-secondary: #00325A;
+//$nostr-sys-dark-secondary-container: #00487F;
+//$nostr-sys-dark-secondary: #A1C9FF;
+//$nostr-sys-dark-on-primary-container: #DCE1FF;
+//$nostr-sys-dark-on-primary: #042978;
+//$nostr-sys-dark-primary-container: #264190;
+//$nostr-sys-dark-primary: #B5C4FF;
+//$nostr-ref-error-error0: #000000;
+//$nostr-ref-error-error10: #410002;
+//$nostr-ref-error-error20: #690005;
+//$nostr-ref-error-error30: #93000A;
+//$nostr-ref-error-error40: #BA1A1A;
+//$nostr-ref-error-error50: #DE3730;
+//$nostr-ref-error-error60: #FF5449;
+//$nostr-ref-error-error70: #FF897D;
+//$nostr-ref-error-error80: #FFB4AB;
+//$nostr-ref-error-error90: #FFDAD6;
+//$nostr-ref-error-error95: #FFEDEA;
+//$nostr-ref-error-error99: #FFFBFF;
+//$nostr-ref-error-error100: #FFFFFF;
+//$nostr-ref-primary-primary0: #000000;
+//$nostr-ref-primary-primary10: #00164D;
+//$nostr-ref-primary-primary20: #042978;
+//$nostr-ref-primary-primary30: #264190;
+//$nostr-ref-primary-primary40: #405AA9;
+//$nostr-ref-primary-primary50: #5A73C4;
+//$nostr-ref-primary-primary60: #748DE0;
+//$nostr-ref-primary-primary70: #8FA8FD;
+//$nostr-ref-primary-primary80: #B5C4FF;
+//$nostr-ref-primary-primary90: #DCE1FF;
+//$nostr-ref-primary-primary95: #EFF0FF;
+//$nostr-ref-primary-primary99: #FEFBFF;
+//$nostr-ref-primary-primary100: #FFFFFF;
+//$nostr-ref-secondary-secondary0: #000000;
+//$nostr-ref-secondary-secondary10: #001C37;
+//$nostr-ref-secondary-secondary20: #00325A;
+//$nostr-ref-secondary-secondary30: #00487F;
+//$nostr-ref-secondary-secondary40: #0E61A4;
+//$nostr-ref-secondary-secondary50: #367ABF;
+//$nostr-ref-secondary-secondary60: #5494DB;
+//$nostr-ref-secondary-secondary70: #71AFF7;
+//$nostr-ref-secondary-secondary80: #A1C9FF;
+//$nostr-ref-secondary-secondary90: #D2E4FF;
+//$nostr-ref-secondary-secondary95: #EAF1FF;
+//$nostr-ref-secondary-secondary99: #FDFCFF;
+//$nostr-ref-secondary-secondary100: #FFFFFF;
+//$nostr-surfaces-light-surface1: #FDFCFF;
+//$nostr-surfaces-light-surface2: #FDFCFF;
+//$nostr-surfaces-light-surface3: #FDFCFF;
+//$nostr-surfaces-light-surface4: #FDFCFF;
+//$nostr-surfaces-light-surface5: #FDFCFF;
+//$nostr-surfaces-dark-surface1: #001C37;
+//$nostr-surfaces-dark-surface2: #001C37;
+//$nostr-surfaces-dark-surface3: #001C37;
+//$nostr-surfaces-dark-surface4: #001C37;
+//$nostr-surfaces-dark-surface5: #001C37;
+//$nostr-extended-warning-light-warning: #885200;
+//$nostr-extended-warning-light-on-warning: #FFFFFF;
+//$nostr-extended-warning-light-warning-container: #FFDCBB;
+//$nostr-extended-warning-light-on-warning-container: #2C1700;
+//$nostr-extended-warning-dark-warning: #FFB869;
+//$nostr-extended-warning-dark-on-warning: #482900;
+//$nostr-extended-warning-dark-warning-container: #683D00;
+//$nostr-extended-warning-dark-on-warning-container: #FFDCBB;
+//$nostr-extended-success-light-success: #006E11;
+//$nostr-extended-success-light-on-success: #FFFFFF;
+//$nostr-extended-success-light-success-container: #96FA89;
+//$nostr-extended-success-light-on-success-container: #002202;
+//$nostr-extended-success-dark-success: #7ADC70;
+//$nostr-extended-success-dark-on-success: #003A05;
+//$nostr-extended-success-dark-success-container: #00530A;
+//$nostr-extended-success-dark-on-success-container: #96FA89;
