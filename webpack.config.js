@@ -20,7 +20,7 @@ module.exports = {
         rules: [
             // Regla para compilar archivos SCSS
             {
-                test: /\.scss$/,
+                test: /\.s[ac]ss$/i,
                 use: [
                     'style-loader',
                     'css-loader',
