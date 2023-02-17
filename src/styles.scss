@@ -118,13 +118,20 @@ $colors: map-merge($colors, $addColors);
 
 }
 
-.swiper {
-  width: 600px;
-  //height: 300px;
-}
+//.swiper {
+//  width: 600px;
+//  //height: 300px;
+//}
 
 .header-carousel-bullet {
   cursor: pointer;
+}
+
+.color-bar-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 

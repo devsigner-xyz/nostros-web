@@ -33,7 +33,29 @@ class HeaderCarousel {
         };
 
         const swiper = new Swiper('.swiper', {
-            autoHeight: true,
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            spaceBetween: 50, // Definimos el espacio entre las diapositivas
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true
+            },
+            on: {
+                init: function() {
+                    this.slides.eq(2).addClass('swiper-slide-active');
+                },
+                transitionStart: function() {
+                    this.slides.removeClass('swiper-slide-active');
+                },
+                transitionEnd: function() {
+                    this.slides.eq(this.activeIndex + 2).addClass('swiper-slide-active');
+                },
+            },
             pagination: {
                 el: '#swiper-pagination',
                 bulletClass: 'header-carousel-bullet',
