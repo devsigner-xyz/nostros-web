@@ -1,39 +1,39 @@
-@import "bulma/sass/utilities/initial-variables";
-@import "bulma/sass/utilities/functions";
-@import "~toastify-js/src/toastify.css";
+@import 'bulma/sass/utilities/initial-variables';
+@import 'bulma/sass/utilities/functions';
+@import 'toastify-js/src/toastify.css';
 @import 'swiper/swiper-bundle.min.css';
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 
-$theme-background: #001C37;
-$theme-on-background: #D2E4FF;
-$theme-surface: #001C37;
+$theme-background: #001c37;
+$theme-on-background: #d2e4ff;
+$theme-surface: #001c37;
 $theme-surface1: #092541;
-$theme-surface2: #0E2A47;
-$theme-surface3: #142F4D;
-$theme-on-surface: #D2E4FF;
-$theme-success: #00530A;
-$theme-primary: #222A45;
-$theme-dark: #001C37;
-$theme-success-container: #00530A;
-$theme-on-success-container: #96FA89;
-$theme-inverse-surface: #D2E4FF;
+$theme-surface2: #0e2a47;
+$theme-surface3: #142f4d;
+$theme-on-surface: #d2e4ff;
+$theme-success: #00530a;
+$theme-primary: #222a45;
+$theme-dark: #001c37;
+$theme-success-container: #00530a;
+$theme-on-success-container: #96fa89;
+$theme-inverse-surface: #d2e4ff;
 $theme-neutral: #476386;
-$theme-secondary-container: #00487F;
-$theme-on-secondary-container: #D2E4FF;
-$theme-tertiary: #9D396F;
+$theme-secondary-container: #00487f;
+$theme-on-secondary-container: #d2e4ff;
+$theme-tertiary: #9d396f;
 $theme-on-tertiary: $white;
-$bitcoin: #F7931A;
-$typescript: #3178C6;
-$react-native: #61DAFB;
-$fdroid: #62B709;
+$bitcoin: #f7931a;
+$typescript: #3178c6;
+$react-native: #61dafb;
+$fdroid: #62b709;
 
 // Set brand colors
 $link: $theme-primary;
-$text-strong: #001C37;
+$text-strong: #001c37;
 
 // Update Bulma's global variables
-$family-sans-serif: "Roboto", sans-serif;
+$family-sans-serif: 'Roboto', sans-serif;
 //$grey-dark: $brown;
 //$grey-light: $beige-light;
 $primary: $theme-primary;
@@ -42,63 +42,99 @@ $widescreen-enabled: true;
 $fullhd-enabled: true;
 
 // Update some of Bulma's component variables
-$body-background-color: #F3F3FA;
+$body-background-color: #f3f3fa;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
 
 // Import only what you need from Bulma
-@import "../node_modules/bulma/sass/utilities/all";
+@import '../node_modules/bulma/sass/utilities/all';
 
 $addColors: (
-        "theme-background":($theme-background, $theme-on-background),
-        "theme-on-background":($theme-on-background, $theme-on-background), // revisar el color del texto
-        "theme-surface":($theme-surface, $theme-on-surface),
-        "theme-surface1":($theme-surface1, $theme-on-surface),
-        "theme-surface2":($theme-surface2, $theme-on-surface),
-        "theme-surface3":($theme-surface3, $theme-on-surface),
-        "theme-on-surface":($theme-on-surface, $theme-on-surface),
-        "theme-success-container":($theme-success-container, $theme-on-success-container),
-        "theme-on-success-container":($theme-on-success-container, $theme-on-success-container),
-        "theme-inverse-surface":($theme-inverse-surface, $primary),
-        "theme-tertiary":($theme-tertiary, $theme-on-tertiary),
-        "theme-on-tertiary":($theme-on-tertiary, $theme-on-tertiary),
-        "theme-secondary-container":($theme-secondary-container, $theme-on-secondary-container),
-        "theme-on-secondary-container":($theme-on-secondary-container, $theme-on-secondary-container),
-        "bitcoin": ($bitcoin, $black),
-        "typescript": ($typescript, $white),
-        "react-native": ($react-native, $white),
-        "fdroid": ($fdroid, $white)
+  'theme-background': (
+    $theme-background,
+    $theme-on-background,
+  ),
+  'theme-on-background': (
+    $theme-on-background,
+    $theme-on-background,
+  ),
+  // revisar el color del texto
+  'theme-surface':
+    (
+      $theme-surface,
+      $theme-on-surface,
+    ),
+  'theme-surface1': (
+    $theme-surface1,
+    $theme-on-surface,
+  ),
+  'theme-surface2': (
+    $theme-surface2,
+    $theme-on-surface,
+  ),
+  'theme-surface3': (
+    $theme-surface3,
+    $theme-on-surface,
+  ),
+  'theme-on-surface': (
+    $theme-on-surface,
+    $theme-on-surface,
+  ),
+  'theme-success-container': (
+    $theme-success-container,
+    $theme-on-success-container,
+  ),
+  'theme-on-success-container': (
+    $theme-on-success-container,
+    $theme-on-success-container,
+  ),
+  'theme-inverse-surface': (
+    $theme-inverse-surface,
+    $primary,
+  ),
+  'theme-tertiary': (
+    $theme-tertiary,
+    $theme-on-tertiary,
+  ),
+  'theme-on-tertiary': (
+    $theme-on-tertiary,
+    $theme-on-tertiary,
+  ),
+  'theme-secondary-container': (
+    $theme-secondary-container,
+    $theme-on-secondary-container,
+  ),
+  'theme-on-secondary-container': (
+    $theme-on-secondary-container,
+    $theme-on-secondary-container,
+  ),
+  'bitcoin': (
+    $bitcoin,
+    $black,
+  ),
+  'typescript': (
+    $typescript,
+    $white,
+  ),
+  'react-native': (
+    $react-native,
+    $white,
+  ),
+  'fdroid': (
+    $fdroid,
+    $white,
+  ),
 );
 $colors: map-merge($colors, $addColors);
 
-@import "../node_modules/bulma/sass/base/all";
-@import "../node_modules/bulma/sass/components/all";
-@import "../node_modules/bulma/sass/elements/all";
-@import "../node_modules/bulma/sass/form/all";
-@import "../node_modules/bulma/sass/grid/all";
-@import "../node_modules/bulma/sass/helpers/all";
-@import "../node_modules/bulma/sass/layout/all";
-
-//@font-face {
-//  font-family: 'Material Symbols Outlined';
-//  font-style: normal;
-//  src: url(fonts/MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].ttf) format('otf');
-//}
-//
-//.material-symbols-outlined {
-//  font-family: 'Material Symbols Outlined';
-//  font-weight: normal;
-//  font-style: normal;
-//  font-size: 20px; /* Preferred icon size */
-//  display: inline-block;
-//  line-height: 1;
-//  text-transform: none;
-//  letter-spacing: normal;
-//  word-wrap: normal;
-//  white-space: nowrap;
-//  direction: ltr;
-//}
+@import '../node_modules/bulma/sass/base/all';
+@import '../node_modules/bulma/sass/components/all';
+@import '../node_modules/bulma/sass/elements/all';
+@import '../node_modules/bulma/sass/form/all';
+@import '../node_modules/bulma/sass/grid/all';
+@import '../node_modules/bulma/sass/helpers/all';
+@import '../node_modules/bulma/sass/layout/all';
 
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
@@ -113,27 +149,45 @@ $colors: map-merge($colors, $addColors);
 .header__logo {
   max-width: 300px;
 }
-
+.copy {
+  cursor: copy;
+}
+// Align carousel images bottom
 .header__note-image {
-
 }
-
-//.swiper {
-//  width: 600px;
-//  //height: 300px;
-//}
-
-.header-carousel-bullet {
-  cursor: pointer;
+.notes-carousel {
+  .swiper-wrapper {
+    align-items: flex-end;
+  }
+  .note-item{
+    display: flex;
+    align-items: flex-end;
+  }
 }
+// .note-item {
+//   height: 350px;
+//   position: relative;
+//   .note-image {
+//     position: absolute;
+//     bottom: 0;
+//   }
+// }
 
+// .header-carousel-bullet {
+//   cursor: pointer;
+// }
+
+.section-has-notes {
+  padding-bottom: 8px !important;
+}
+.notes-image {
+}
 .color-bar-container {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
 }
-
 
 //$nostr-sys-light-on-error: #FFFFFF;
 //$nostr-sys-light-error-container: #FFDAD6;

@@ -35,6 +35,7 @@ class HeaderCarousel {
         const swiper = new Swiper('.swiper', {
             effect: 'coverflow',
             grabCursor: true,
+            autoHeight: true,
             centeredSlides: true,
             slidesPerView: 'auto',
             spaceBetween: 50, // Definimos el espacio entre las diapositivas
