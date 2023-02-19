@@ -13,7 +13,7 @@
     <title>Nostros, a nostr client for Android</title>
   </head>
   <body>
-    <%= require('html-loader!./navbar.html').default %>
+    <%= require('html-loader!./partials/navbar.html').default %>
 
     <section
       class="section is-medium has-background-theme-primary-container has-text-centered has-text-theme-on-primary-container"
@@ -74,18 +74,6 @@
         </ul>
       </div>
     </section>
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          <strong>Nostros</strong> by
-          <a href="https://github.com/KoalaSat">KoalaSat</a>. The source code of
-          Nostros is licensed
-          <a href="https://github.com/KoalaSat/nostros/blob/main/LICENSE"
-            >Apache 2.0</a
-          >.
-        </p>
-      </div>
-    </footer>
-    <script type="text/javascript" src="bundle.js"></script>
+    <%= require('html-loader!./partials/footer.html').default %>
   </body>
 </html>

@@ -13,123 +13,406 @@
     <title>Nostros, a nostr client for Android</title>
   </head>
   <body>
-	<%= require('html-loader!./navbar.html').default %>
-    <header class="home-header header has-background-theme-background">
-      <div class="container is-flex-direction-column">
-        <div class="columns is-centered">
-          <div class="column is-narrow">
+	<%= require('html-loader!./partials/navbar.html').default %>
+    <section class="hero hero-head is-medium is-theme-background">
+      <div class="hero-body is-flex is-flex-direction-column is-align-items-center">
+          <div class="block">
             <img
-              class="header__logo has-ratio"
-              width="3183"
-              height="633"
-              src="./images/nostros-horizontal-header.svg"
-              alt=""
-            />
+                class="header__logo has-ratio"
+                width="3183"
+                height="633"
+                src="./images/nostros-horizontal.svg"
+                alt=""
+              />
           </div>
-        </div>
-        <div class="columns is-centered has-text-centered mb-6">
-          <div class="column is-three-quarters-desktop">
-            <div class="block">
-              <h1
-                class="title is-2 has-text-weight-bold has-text-theme-on-surface"
-              >
-                nostr client for Android
-              </h1>
-            </div>
-            <div class="block">
-              <h2
-                class="subtitle is-5 has-text-weight-light has-text-theme-on-surface"
-              >
-                nostr is a protocol that allows the creation of an uncensored,
-                decentralized, ad-free social network.
-              </h2>
+          <div class="block">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-three-quarters-desktop">
+                <div class="block">
+                  <h1
+                    class="title is-2 has-text-weight-bold has-text-theme-on-surface"
+                  >
+                    nostr client for Android
+                  </h1>
+                </div>
+                <div class="block">
+                  <h2
+                    class="subtitle is-5 has-text-weight-light has-text-theme-on-surface"
+                  >
+                    nostr is a protocol that allows the creation of an uncensored,
+                    decentralized, ad-free social network.
+                  </h2>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="columns is-centered is-vcentered">
-          <div class="column is-narrow">
+          <div class="block">
             <img
-              class="header__note-image"
-              src="./images/carousel/note-simple.svg"
-              alt=""
-            />
+                class="header__note-image"
+                src="./images/carousel/note-simple.svg"
+                alt=""
+              />
           </div>
+  
+          <div class="tags are-medium is-centered">
+            <span class="tag is-rounded is-theme-surface1">
+              <span class="material-symbols-outlined">&#xe1a0;</span>
+              <span>&nbsp;Groups</span>
+            </span>
+  
+            <span
+              class="tag is-rounded is-theme-surface1"
+            >
+              <span class="material-symbols-outlined">&#xe1d3;</span>
+              <span>&nbsp;Reactions</span>
+            </span>
+  
+            <span
+              class="tag is-rounded is-theme-surface1"
+            >
+              <span class="material-symbols-outlined">&#xe86a;</span>
+              <span>&nbsp;Repost</span>
+            </span>
+  
+            <span
+              class="tag is-rounded is-theme-surface1"
+            >
+              <span class="material-symbols-outlined">&#xef6c;</span>
+              <span>&nbsp;Comments</span>
+            </span>
+  
+            <span
+              class="tag is-rounded is-theme-surface1"
+            >
+              <span class="material-symbols-outlined">&#xef76;</span>
+              <span>&nbsp;NIP-05</span>
+            </span>
+  
+            <span
+              class="tag is-rounded is-theme-surface1"
+            >
+              <span class="material-symbols-outlined">&#xe0e6;</span>
+              <span>&nbsp;Mentions</span>
+            </span>
+          </div>
+          <div class="tags are-medium is-centered">
+            <span class="tag is-rounded is-theme-success-container has-text-theme-on-success-container">
+              <span class="material-symbols-outlined">&#xf0c1;</span>
+              <span>&nbsp;Relay friendly</span>
+            </span>
+          </div>
+   
+      </div>
+    </section>
+    <section
+    class="section section-has-notes is-medium has-background-theme-secondary-container has-text-centered is-relative"
+  >
+    <div class="columns is-centered mb-6">
+      <div class="column is-9">
+        <div class="block">
+          <h3
+            class="title is-3 has-text-weight-bold has-text-theme-on-secondary-container"
+          >
+          Help create a freer,
+            uncensored future on the Internet.
+            
+          </h3>
         </div>
-
-        <div class="tags are-medium is-centered">
-          <span class="tag is-rounded is-theme-surface1">
-            <span class="material-symbols-outlined">&#xe1a0;</span>
-            <span>&nbsp;Groups</span>
-          </span>
-
-          <span
-            class="tag is-rounded is-theme-surface1 swiper-pagination-custom-item"
-          >
-            <span class="material-symbols-outlined">&#xe1d3;</span>
-            <span>&nbsp;Reactions</span>
-          </span>
-
-          <span
-            class="tag is-rounded is-theme-surface1 swiper-pagination-custom-item"
-          >
-            <span class="material-symbols-outlined">&#xe86a;</span>
-            <span>&nbsp;Repost</span>
-          </span>
-
-          <span
-            class="tag is-rounded is-theme-surface1 swiper-pagination-custom-item"
-          >
-            <span class="material-symbols-outlined">&#xef6c;</span>
-            <span>&nbsp;Comments</span>
-          </span>
-
-          <span
-            class="tag is-rounded is-theme-surface1 swiper-pagination-custom-item"
-          >
-            <span class="material-symbols-outlined">&#xef76;</span>
-            <span>&nbsp;NIP-05</span>
-          </span>
-
-          <span
-            class="tag is-rounded is-theme-surface1 swiper-pagination-custom-item"
-          >
-            <span class="material-symbols-outlined">&#xe0e6;</span>
-            <span>&nbsp;Mentions</span>
-          </span>
+        <div class="block">
+          <h4 class="subtitle is-5 has-text-theme-on-secondary-container">
+            Join the plebs and experience freedom of expression and privacy
+            on a social network for firt time.
+          </h4>
         </div>
-        <div class="tags are-medium is-centered">
-          <span class="tag is-rounded is-theme-success-container">
-            <span class="material-symbols-outlined">&#xf0c1;</span>
-            <span>&nbsp;Relay friendly</span>
-          </span>
+        <div class="block">
+          <a class="button is-primary" href="https://github.com/KoalaSat/nostros" target="_blank">View on GitHub</a>
         </div>
       </div>
-    </header>
+    </div>
+    <%= require('html-loader!./partials/notes_carousel.html').default %>
+    <div id="colorBarContainer" class="color-bar-container"></div>
+  </section>
+    <section class="section is-medium">
+      <div class="container">
+        <div class="columns is-vcentered is-multiline">
+          <div class="column is-full is-half-desktop">
+            <div class="content is-medium">
+              <div class="block">
+                <h3 class="title is-2 has-text-weight-bold">How do I download Nostros?</h3>
+              </div>
+              <div class="block">
+                <h4 class="subtitle is-5">You can download Nostros from GitHub or use F-Droid to receive automatic updates</h4>
+              </div>
+              <div class="block">
+                <p>
+                  F-Droid is an open source alternative to Play Store that offers free and open source software applications. 
+                </p>
+              </div>
+            <div class="block">
+              <div class="buttons">
+                <a href="https://f-droid.org/" class="button is-success">Download F-Droid</a>
+                <a class="button is-text" href="https://github.com/KoalaSat/nostros" target="_blank">Download from GitHub</a>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="column is-half-desktop">
+            <div class="columns is-mobile is-multiline">
+              <div class="column is-half-mobile is-one-third-tablet">
+                <img src="./images/install/01.png" alt="">
+                <p class="is-size-7">01. <a class="is-link" href="https://f-droid.org/" target="_blank">Download</a> and open the F-Droid app on your Android device.</p>
+              </div>
+              <div class="column is-half-mobile is-one-third-tablet">
+                <img src="./images/install/02.png" alt="">
+                <p class="is-size-7">02. Go to "Settings"</p>
+              </div>
+              <div class="column is-half-mobile is-one-third-tablet">
+                <img src="./images/install/03.png" alt="">
+                <p class="is-size-7">03. Select "Manage repositories" and add new repository.</p>
+              </div>
+              <div class="column is-half-mobile is-one-third-tablet">
+                <img src="./images/install/04.png" alt="">
+                <p class="is-size-7">04. Add https://apt.izzysoft.de/fdroid/repo as repository adrress and confirm.</p>
+              </div>
+              <div class="column is-half-mobile is-one-third-tablet">
+                <img src="./images/install/05.png" alt="">
+                <p class="is-size-7">05. Search for "Nostros" in the F-Droid search bar.</p>
+              </div>
+              <div class="column is-half-mobile is-one-third-tablet">
+                <img src="./images/install/06.png" alt="">
+                <p class="is-size-7">06. Install Nostros</p>
+              </div>
+            </div>
+            <div class="block">
+              <pre
+              id="nostros-repo"
+              class="copy has-background-theme-surface has-text-theme-on-surface"
+              data-clipboard-text="https://apt.izzysoft.de/fdroid/repo"
+            >Repository: https://apt.izzysoft.de/fdroid/repo</pre>
+        </div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    
+  <section class="section is-medium has-background-theme-background">
+    <div class="container">
+      <div class="block has-text-centered pb-6">
+        <h3
+          class="title is-3 has-text-weight-bold has-text-centered has-text-theme-on-background"
+        >
+          Features
+        </h3>
+        <h4
+          class="subtitle is-5 has-text-weight-light has-text-theme-on-background"
+        >
+          Discover Nostros' most outstanding features
+        </h4>
+      </div>
+      <div class="columns is-multiline">
+        <div class="column is-half-tablet is-one-third-desktop">
+          <div
+            class="card has-background-theme-surface1 has-text-theme-on-surface"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div class="is-flex is-flex-direction-row">
+                  <span class="material-symbols-outlined mr-3">&#xe1a0;</span>
+                  <h5 class="title is-5 has-text-theme-on-surface">Groups</h5>
+                </div>
+                <p class="has-text-theme-on-surface">
+                  Access or create public chat groups and interact and meet
+                  other users. Mute users in your group.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-half-tablet is-one-third-desktop">
+          <div
+            class="card has-background-theme-surface1 has-text-theme-on-surface"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div class="is-flex is-flex-direction-row">
+                  <span class="material-symbols-outlined mr-3">&#xe1d3;</span>
+                  <h5 class="title is-5 has-text-theme-on-surface">
+                    Reactions
+                  </h5>
+                </div>
+                <p class="has-text-theme-on-surface">
+                  React to other users' notes by indicating whether you like
+                  it... or don't like it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-half-tablet is-one-third-desktop">
+          <div
+            class="card has-background-theme-surface1 has-text-theme-on-surface"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div class="is-flex is-flex-direction-row">
+                  <span class="material-symbols-outlined mr-3">&#xe86a;</span>
+                  <h5 class="title is-5 has-text-theme-on-surface">Repost</h5>
+                </div>
+                <p class="has-text-theme-on-surface">
+                  Share or quote the content of an original post with your
+                  followers and in the global feed.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-half-tablet is-one-third-desktop">
+          <div
+            class="card has-background-theme-surface1 has-text-theme-on-surface"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div class="is-flex is-flex-direction-row">
+                  <span class="material-symbols-outlined mr-3">&#xef6c;</span>
+                  <h5 class="title is-5 has-text-theme-on-surface">
+                    Comments
+                  </h5>
+                </div>
+                <p class="has-text-theme-on-surface">
+                  Comment on other users' notes without limit or censorship,
+                  add images or links.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-half-tablet is-one-third-desktop">
+          <div
+            class="card has-background-theme-surface1 has-text-theme-on-surface"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div class="is-flex is-flex-direction-row">
+                  <span class="material-symbols-outlined mr-3">&#xef76;</span>
+                  <h5 class="title is-5 has-text-theme-on-surface">NIP-05</h5>
+                </div>
+                <p class="has-text-theme-on-surface">
+                  Get your verification badge by associating an Internet
+                  domain to your public key.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-half-tablet is-one-third-desktop">
+          <div
+            class="card has-background-theme-surface1 has-text-theme-on-surface"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div class="is-flex is-flex-direction-row">
+                  <span class="material-symbols-outlined mr-3">&#xe0e6;</span>
+                  <h5 class="title is-5 has-text-theme-on-surface">
+                    Mentions
+                  </h5>
+                </div>
+                <p class="has-text-theme-on-surface">
+                  Mention other people using @ when writing notes or in public
+                  chat messages.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-half-tablet is-one-third-desktop">
+          <div
+            class="card has-background-theme-surface1 has-text-theme-on-surface"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div class="is-flex is-flex-direction-row">
+                  <span
+                    class="material-symbols-outlined has-text-bitcoin mr-3"
+                    >&#xec1c;</span
+                  >
+                  <h5 class="title is-5 has-text-theme-on-surface">Tips</h5>
+                </div>
+                <p class="has-text-theme-on-surface">
+                  Send tips in the form of Bitcoin through Lightning Network's
+                  integration with nostr.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-half-tablet is-one-third-desktop">
+          <div
+            class="card has-background-theme-surface1 has-text-theme-on-surface"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div class="is-flex is-flex-direction-row">
+                  <span class="material-symbols-outlined mr-3">&#xe80b;</span>
+                  <h5 class="title is-5 has-text-theme-on-surface">
+                    Global Feed
+                  </h5>
+                </div>
+                <p class="has-text-theme-on-surface">
+                  View all the notes of the relays you are connected to and
+                  interact with them.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third-desktop">
+          <div
+            class="card has-background-theme-success-container has-text-theme-on-success-container"
+          >
+            <div class="card-content">
+              <div class="content">
+                <div class="is-flex is-flex-direction-row">
+                  <span class="material-symbols-outlined mr-3">&#xf0c1;</span>
+                  <h5 class="title is-5 has-text-theme-on-success-container">
+                    Relay friendly
+                  </h5>
+                </div>
+                <p>
+                  We are designed and programmed to be relay friendly and
+                  avoid overloads.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </section>
     <section class="section is-medium is-relative">
       <div class="container">
-        <div class="columns is-vcentered">
-          <div class="column is-half-desktop">
+        <div class="columns is-vcentered is-multiline reverse-columns">
+          <div class="column is-full-tablet is-half-desktop">
             <div class="block">
-              <h3 class="title is-3 has-text-weight-bold">Download Nostros and start sharing your ideas</h3>
+              <h3 class="title is-3 has-text-weight-bold">Creating an account on nostr is an act of responsibility.</h3>
             </div>
             <div class="block">
               <h4 class="subtitle is-5">
-				Nostros is the first
-                <a class="is-link" href="https://github.com/search?q=nostr" target="_blank"
-                  >nostr</a
-                >
-                client on Android.
+                Create your account, save your 12 secret words and start interacting with the nostr protocol.
+                
 			  </h4>
             </div>
             <div class="block">
               <p>
-                Create your account, save your 12 secret words and start interacting with the nostr protocol.
+                Decentralization brings with it the responsibility to securely store your login credentials (12 words or private key). If you lose them you will not be able to recover your account.
               </p>
             </div>
             <div class="block">
-              <button class="js-modal-trigger">12 words? WTF</button>
-			  <div class="modal">
+              <button class="js-modal-trigger button is-primary" data-target="seed-phrase-modal">12 words? WTF</button>
+			  <div id="seed-phrase-modal" class="modal">
 				<div class="modal-background"></div>
 				<div class="modal-card">
 				  <header class="modal-card-head">
@@ -137,10 +420,21 @@
 					<button class="delete" aria-label="close"></button>
 				  </header>
 				  <section class="modal-card-body">
-					<p>12 secret words? What the heck is that?! Well, imagine you're at a super exclusive party, only for your closest friends. Now, the only way to get in is through a password, but this time it's not something typical like a combination of numbers and letters. Instead, they give you a list of 12 words, which are super special because together they are the key to get into the party.</p>
-					<p>Here's how it works at Nostros. When you sign up, you create a set of 12 words that are called a "seed phrase" and are the only way to access your account. Think of it as a master key that unlocks your Nostros profile.</p>
-					<p>Why 12 words and not something longer? Well, it's about making it easier for you to remember and write the seed phrase. Plus, it's more secure than using a simple password that someone else could guess.</p>
-					<p>So, if you want to join the party at Nostros, make sure you write down those 12 secret words in a safe place, don't share them with anyone and have fun connecting with people from all over the world!</p>
+            <div class="block">
+              <h4 class="title is-4">12 secret words? What the heck is that?!</h4>
+            </div>
+					<div class="block">
+            <p>Well, imagine you're at a super exclusive party, only for your closest friends. Now, the only way to get in is through a password, but this time it's not something typical like a combination of numbers and letters. Instead, they give you a list of 12 words, which are super special because together they are the key to get into the party.</p>
+          </div>
+					<div class="block">
+            <p>Here's how it works at Nostros. When you sign up, you create a set of 12 words that are called a "seed phrase" and are the only way to access your account. Think of it as a master key that unlocks your Nostros profile.</p>
+          </div>
+					<div class="block">
+            <p>Why 12 words and not something longer? Well, it's about making it easier for you to remember and write the seed phrase. Plus, it's more secure than using a simple password that someone else could guess.</p>
+          </div>
+					<div class="block">
+            <p>So, if you want to join the party at Nostros, make sure you write down those 12 secret words in a safe place, don't share them with anyone and have fun connecting with people from all over the world!</p>
+          </div>
 				  </section>
 				  <footer class="modal-card-foot">
 					<button class="button is-success"></button>
@@ -151,7 +445,7 @@
 	
             </div>
           </div>
-          <div class="column is-half-desktop">
+          <div class="column is-full-tablet is-half-desktop">
             <img
               class="is-responsive has-ratio"
               width="641"
@@ -206,503 +500,21 @@ npub19l0cks7zmf6sz062peqlq277zmuskhgad58lgnr2awpp3t95esfstaws8n
     </section>
 
     <section
-      class="section section-has-notes is-medium has-background-theme-secondary-container has-text-centered is-relative"
-    >
-      <div class="columns is-centered mb-6">
-        <div class="column is-9">
-          <div class="block">
-            <h3
-              class="title is-3 has-text-weight-bold has-text-theme-on-secondary-container"
-            >
-              Experience, for the first time, freedom of expression and privacy
-              on a network and privacy in a social network. social network.
-            </h3>
-          </div>
-          <div class="block">
-            <h4 class="subtitle is-5 has-text-theme-on-secondary-container">
-              Join the Nostros community today and help create a freer,
-              uncensored future on the Internet. uncensored future on the
-              Internet.
-            </h4>
-          </div>
-          <div class="block">
-            <a class="button is-primary">View on GitHub</a>
-          </div>
-        </div>
-      </div>
-      <div class="notes-carousel">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="note-item">
-              <img
-                class="note-image"
-                src="./images/notes/01.svg"
-                loading="lazy"
-                alt="Imagen 1"
-              />
-              <div class="swiper-lazy-preloader"></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="note-item">
-              <img
-                class="note-image"
-                src="./images/notes/02.svg"
-                loading="lazy"
-                alt="Imagen 1"
-              />
-              <div class="swiper-lazy-preloader"></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="note-item">
-              <img
-                class="note-image"
-                src="./images/notes/03.svg"
-                loading="lazy"
-                alt="Imagen 2"
-              />
-              <div class="swiper-lazy-preloader"></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="note-item">
-              <img
-                class="note-image"
-                src="./images/notes/04.svg"
-                loading="lazy"
-                alt="Imagen 3"
-              />
-              <div class="swiper-lazy-preloader"></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="note-item">
-              <img
-                class="note-image"
-                src="./images/notes/05.svg"
-                loading="lazy"
-                alt="Imagen 3"
-              />
-              <div class="swiper-lazy-preloader"></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="note-item">
-              <img
-                class="note-image"
-                src="./images/notes/06.svg"
-                loading="lazy"
-                alt="Imagen 3"
-              />
-              <div class="swiper-lazy-preloader"></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="note-item">
-              <img
-                class="note-image"
-                src="./images/notes/07.svg"
-                loading="lazy"
-                alt="Imagen 3"
-              />
-              <div class="swiper-lazy-preloader"></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="note-item">
-              <img
-                class="note-image"
-                src="./images/notes/08.svg"
-                loading="lazy"
-                alt="Imagen 3"
-              />
-              <div class="swiper-lazy-preloader"></div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="note-item">
-              <img
-                class="note-image"
-                src="./images/notes/10.svg"
-                loading="lazy"
-                alt="Imagen 3"
-              />
-              <div class="swiper-lazy-preloader"></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="note-item">
-              <img
-                class="note-image"
-                src="./images/notes/11.svg"
-                loading="lazy"
-                alt="Imagen 3"
-              />
-              <div class="swiper-lazy-preloader"></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="note-item">
-              <img
-                class="note-image"
-                src="./images/notes/12.svg"
-                loading="lazy"
-                alt="Imagen 3"
-              />
-              <div class="swiper-lazy-preloader"></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="note-item">
-              <img
-                class="note-image"
-                src="./images/notes/13.svg"
-                loading="lazy"
-                alt="Imagen 3"
-              />
-              <div class="swiper-lazy-preloader"></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="note-item">
-              <img
-                class="note-image"
-                src="./images/notes/14.svg"
-                loading="lazy"
-                alt="Imagen 3"
-              />
-              <div class="swiper-lazy-preloader"></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="note-item">
-              <img
-                class="note-image"
-                src="./images/notes/15.svg"
-                loading="lazy"
-                alt="Imagen 3"
-              />
-              <div class="swiper-lazy-preloader"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="colorBarContainer" class="color-bar-container"></div>
-    </section>
-
-    <section class="section is-medium has-background-theme-background">
-      <div class="container">
-        <div class="block has-text-centered pb-6">
-          <h3
-            class="title is-3 has-text-weight-bold has-text-centered has-text-theme-on-background"
-          >
-            Features
-          </h3>
-          <h4
-            class="subtitle is-5 has-text-weight-light has-text-theme-on-background"
-          >
-            Discover Nostros' most outstanding features
-          </h4>
-        </div>
-        <div class="columns is-multiline">
-          <div class="column is-3">
-            <div
-              class="card has-background-theme-surface1 has-text-theme-on-surface"
-            >
-              <div class="card-content">
-                <div class="content">
-                  <div class="is-flex is-flex-direction-row">
-                    <span class="material-symbols-outlined mr-3">&#xe1a0;</span>
-                    <h5 class="title is-5 has-text-theme-on-surface">Groups</h5>
-                  </div>
-                  <p class="has-text-theme-on-surface">
-                    Access or create public chat groups and interact and meet
-                    other users. Mute users in your group.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-3">
-            <div
-              class="card has-background-theme-surface1 has-text-theme-on-surface"
-            >
-              <div class="card-content">
-                <div class="content">
-                  <div class="is-flex is-flex-direction-row">
-                    <span class="material-symbols-outlined mr-3">&#xe1d3;</span>
-                    <h5 class="title is-5 has-text-theme-on-surface">
-                      Reactions
-                    </h5>
-                  </div>
-                  <p class="has-text-theme-on-surface">
-                    React to other users' notes by indicating whether you like
-                    it... or don't like it.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-3">
-            <div
-              class="card has-background-theme-surface1 has-text-theme-on-surface"
-            >
-              <div class="card-content">
-                <div class="content">
-                  <div class="is-flex is-flex-direction-row">
-                    <span class="material-symbols-outlined mr-3">&#xe86a;</span>
-                    <h5 class="title is-5 has-text-theme-on-surface">Repost</h5>
-                  </div>
-                  <p class="has-text-theme-on-surface">
-                    Share or quote the content of an original post with your
-                    followers and in the global feed.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-3">
-            <div
-              class="card has-background-theme-surface1 has-text-theme-on-surface"
-            >
-              <div class="card-content">
-                <div class="content">
-                  <div class="is-flex is-flex-direction-row">
-                    <span class="material-symbols-outlined mr-3">&#xef6c;</span>
-                    <h5 class="title is-5 has-text-theme-on-surface">
-                      Comments
-                    </h5>
-                  </div>
-                  <p class="has-text-theme-on-surface">
-                    Comment on other users' notes without limit or censorship,
-                    add images or links.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-3">
-            <div
-              class="card has-background-theme-surface1 has-text-theme-on-surface"
-            >
-              <div class="card-content">
-                <div class="content">
-                  <div class="is-flex is-flex-direction-row">
-                    <span class="material-symbols-outlined mr-3">&#xef76;</span>
-                    <h5 class="title is-5 has-text-theme-on-surface">NIP-05</h5>
-                  </div>
-                  <p class="has-text-theme-on-surface">
-                    Get your verification badge by associating an Internet
-                    domain to your public key.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-3">
-            <div
-              class="card has-background-theme-surface1 has-text-theme-on-surface"
-            >
-              <div class="card-content">
-                <div class="content">
-                  <div class="is-flex is-flex-direction-row">
-                    <span class="material-symbols-outlined mr-3">&#xe0e6;</span>
-                    <h5 class="title is-5 has-text-theme-on-surface">
-                      Mentions
-                    </h5>
-                  </div>
-                  <p class="has-text-theme-on-surface">
-                    Mention other people using @ when writing notes or in public
-                    chat messages.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-3">
-            <div
-              class="card has-background-theme-surface1 has-text-theme-on-surface"
-            >
-              <div class="card-content">
-                <div class="content">
-                  <div class="is-flex is-flex-direction-row">
-                    <span
-                      class="material-symbols-outlined has-text-bitcoin mr-3"
-                      >&#xec1c;</span
-                    >
-                    <h5 class="title is-5 has-text-theme-on-surface">Tips</h5>
-                  </div>
-                  <p class="has-text-theme-on-surface">
-                    Send tips in the form of Bitcoin through Lightning Network's
-                    integration with nostr.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-3">
-            <div
-              class="card has-background-theme-surface1 has-text-theme-on-surface"
-            >
-              <div class="card-content">
-                <div class="content">
-                  <div class="is-flex is-flex-direction-row">
-                    <span class="material-symbols-outlined mr-3">&#xf0c1;</span>
-                    <h5 class="title is-5 has-text-theme-on-surface">
-                      Relay friendly
-                    </h5>
-                  </div>
-                  <p class="has-text-theme-on-surface">
-                    We are designed and programmed to be relay friendly and
-                    avoid overloads.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-3">
-            <div
-              class="card has-background-theme-surface1 has-text-theme-on-surface"
-            >
-              <div class="card-content">
-                <div class="content">
-                  <div class="is-flex is-flex-direction-row">
-                    <span class="material-symbols-outlined mr-3">&#xe80b;</span>
-                    <h5 class="title is-5 has-text-theme-on-surface">
-                      Feed global
-                    </h5>
-                  </div>
-                  <p class="has-text-theme-on-surface">
-                    View all the notes of the relays you are connected to and
-                    interact with them.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section is-medium">
-      <div class="columns is-vcentered">
-        <div class="column is-half-desktop">
-          <img
-            class="fdroid is-responsive has-ratio"
-            width="500"
-            height="500"
-            src="./images/iso_fdroid.svg"
-            alt=""
-          />
-        </div>
-        <div class="column is-half-desktop">
-          <div class="content is-medium">
-            <div class="block">
-              <h3 class="title is-2 has-text-weight-bold">Nostros es FOSS</h3>
-            </div>
-            <div class="block">
-              <h4 class="subtitle is-5">FOSS - Free Open Source Software</h4>
-            </div>
-            <div class="block">
-              <p>
-                Nostros is an open source project, it is distributed with a
-                license that allows users to use, modify and distribute the
-                source code for free and without restrictions. to use, modify
-                and distribute the source code free of charge and without
-                restrictions.
-              </p>
-              <p>
-                If you feel like collaborating with us you can do it in many
-                different ways: programming, translating, designing or just
-                giving feedback.
-              </p>
-            </div>
-            <div class="block">
-              <p class="has-text-weight-semibold">
-                Download the Nostros app from F-Droid or from GitHub.
-              </p>
-            </div>
-          </div>
-          <div class="block">
-            <div class="field is-grouped is-grouped-multiline">
-              <div class="control">
-                <div class="tags has-addons">
-                  <span class="tag is-dark">is</span>
-                  <span class="tag is-success">Android</span>
-                </div>
-              </div>
-              <div class="control">
-                <div class="tags has-addons">
-                  <span class="tag is-dark">is</span>
-                  <span class="tag is-dark has-background-typescript"
-                    >Typescript</span
-                  >
-                </div>
-              </div>
-              <div class="control">
-                <div class="tags has-addons">
-                  <span class="tag is-dark">is</span>
-                  <span class="tag is-light has-background-react-native"
-                    >React Native</span
-                  >
-                </div>
-              </div>
-              <div class="control">
-                <div class="tags has-addons">
-                  <span class="tag is-dark">is</span>
-                  <span class="tag is-dark has-background-theme-tertiary"
-                    >nostros</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="field is-grouped is-grouped-multiline">
-              <div class="control">
-                <div class="tags has-addons">
-                  <span class="tag is-dark">on</span>
-                  <a
-                    href="https://github.com/KoalaSat/nostros"
-                    target="_blank"
-                    class="tag is-primary is-link"
-                    >GitHub</a
-                  >
-                </div>
-              </div>
-              <div class="control">
-                <div class="tags has-addons">
-                  <span class="tag is-dark">on</span>
-                  <a
-                    href="https://apt.izzysoft.de/fdroid/index/apk/com.nostros"
-                    target="_blank"
-                    class="tag has-background-fdroid is-link"
-                    >Fdroid</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="section is-medium has-background-theme-primary-container has-text-centered has-text-theme-on-primary-container"
+      class="section is-medium has-background-theme-background has-text-centered has-text-theme-on-background"
     >
       <div class="container">
         <div class="columns is-centered">
           <div class="column is-three-quarters-desktop">
             <div class="block has-text-centered">
               <h3
-                class="title is-2 has-text-weight-bold has-text-centered has-text-theme-on-primary-container"
+                class="title is-2 has-text-weight-bold has-text-centered has-text-theme-on-background"
               >
                 Support the project with satoshis
               </h3>
             </div>
             <div class="block">
               <h4
-                class="subtitle is-5 has-text-weight-light has-text-theme-on-primary-container"
+                class="subtitle is-5 has-text-weight-light has-text-theme-on-background"
               >
                 All funds received will be used solely for the development and
                 improvement of Nostros.
@@ -754,24 +566,106 @@ npub19l0cks7zmf6sz062peqlq277zmuskhgad58lgnr2awpp3t95esfstaws8n
 			</div>
 		  </div>
 		  <div class="block">
-			<p class="subtitle mb-6 is-4 has-text-theme-on-primary-container">
+			<p class="subtitle mb-6 is-4 has-text-theme-on-background">
 			  <b>Thank you for your support!</b>
 			</p>
 		  </div>
       </div>
     </section>
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          <strong>Nostros</strong> by
-          <a href="https://github.com/KoalaSat">KoalaSat</a>. The source code of
-          Nostros is licensed
-          <a href="https://github.com/KoalaSat/nostros/blob/main/LICENSE"
-            >Apache 2.0</a
-          >.
-        </p>
+
+    <section class="section is-medium">
+      <div class="columns is-vcentered">
+        <div class="column is-half-desktop">
+          <img
+            class="fdroid is-responsive has-ratio"
+            width="500"
+            height="500"
+            src="./images/iso_fdroid.svg"
+            alt=""
+          />
+        </div>
+        <div class="column is-half-desktop">
+          <div class="content is-medium">
+            <div class="block">
+              <h3 class="title is-2 has-text-weight-bold">Nostros is FOSS</h3>
+            </div>
+            <div class="block">
+              <h4 class="subtitle is-5">FOSS - Free Open Source Software</h4>
+            </div>
+            <div class="block">
+              <p>
+                Nostros is an open source project, it is distributed with a
+                license that allows users to use, modify and distribute the
+                source code for free and without restrictions. to use, modify
+                and distribute the source code free of charge and without
+                restrictions.
+              </p>
+              <p>
+                If you feel like collaborating with us you can do it in many
+                different ways: programming, translating, designing or just
+                giving feedback.
+              </p>
+            </div>
+          </div>
+          <div class="block">
+            <div class="field is-grouped is-grouped-multiline">
+              <div class="control">
+                <div class="tags has-addons">
+                  <span class="tag is-dark">is</span>
+                  <span class="tag is-success">Android</span>
+                </div>
+              </div>
+              <div class="control">
+                <div class="tags has-addons">
+                  <span class="tag is-dark">is</span>
+                  <span class="tag is-dark has-background-typescript"
+                    >Typescript</span
+                  >
+                </div>
+              </div>
+              <div class="control">
+                <div class="tags has-addons">
+                  <span class="tag is-dark">is</span>
+                  <span class="tag is-light has-background-react-native"
+                    >React Native</span
+                  >
+                </div>
+              </div>
+              <div class="control">
+                <div class="tags has-addons">
+                  <span class="tag is-dark">is</span>
+                  <span class="tag is-dark has-background-theme-tertiary"
+                    >nostros</span
+                  >
+                </div>
+              </div>
+              <div class="control">
+                <div class="tags has-addons">
+                  <span class="tag is-dark">on</span>
+                  <a
+                    href="https://github.com/KoalaSat/nostros"
+                    target="_blank"
+                    class="tag is-primary is-link"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+              <div class="control">
+                <div class="tags has-addons">
+                  <span class="tag is-dark">on</span>
+                  <a
+                    href="https://apt.izzysoft.de/fdroid/index/apk/com.nostros"
+                    target="_blank"
+                    class="tag has-background-fdroid is-link"
+                    >F-Droid</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
-    <script type="text/javascript" src="bundle.js"></script>
+    </section>
+    <%= require('html-loader!./partials/footer.html').default %>
   </body>
 </html>

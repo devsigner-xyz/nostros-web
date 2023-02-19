@@ -17,6 +17,8 @@ class CopyToast {
                 return 'Chat public key copied'
             case 'nostros-pubkey':
                 return 'Public key copied'
+            case 'nostros-repo':
+                return 'Repository address copied'
             case 'lightning-address':
                 return 'Lightning address copied'
             case 'bitcoin-address':

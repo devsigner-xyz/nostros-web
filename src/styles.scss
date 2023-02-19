@@ -3,7 +3,7 @@
 @import 'toastify-js/src/toastify.css';
 @import 'swiper/swiper-bundle.min.css';
 // Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700'); // TODO
 
 $theme-background: #001c37;
 $theme-on-background: #d2e4ff;
@@ -299,3 +299,11 @@ $colors: map-merge($colors, $addColors);
 //$nostr-extended-success-dark-on-success: #003A05;
 //$nostr-extended-success-dark-success-container: #00530A;
 //$nostr-extended-success-dark-on-success-container: #96FA89;
+
+
+@media(max-width: 767px) { /* <== You can change this break point as per your  needs */
+  .reverse-columns {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+}

@@ -1,20 +1,27 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
   // Webpack mode
   mode: 'production',
 
   // Entry point file
-  entry: './src/index.js',
+  entry: {
+    home: './src/home.js',
+    faq: './src/faq.js',
+    common: './src/common.js',
+  },
 
   // Output file
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
     chunkFilename: '[name].[contenthash].chunk.js', // Cambiar el nombre del archivo de salida del chunk principal
-    publicPath: '/',
+    // publicPath: isProduction ? './' : '/',
+    publicPath:  '/',
   },
 
   // Modules and rules to compile and load files
@@ -35,19 +42,6 @@ module.exports = {
             },
           },
           'sass-loader',
-        ],
-      },
-
-      {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'images',
-            },
-          },
         ],
       },
 
@@ -84,6 +78,19 @@ module.exports = {
         },
       },
 
+      // {
+      //   test: /\.(png|jpe?g|gif|svg)$/i,
+      //   use: [
+      //     {
+      //       loader: 'file-loader',
+      //       options: {
+      //         name: '[name].[ext]',
+      //         outputPath: 'images/',
+      //       }
+      //     }
+      //   ]
+      // },
+
       // Rule to load font files
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
@@ -97,9 +104,30 @@ module.exports = {
 
   // Plugins to generate HTML files and enable live reload
   plugins: [
+    new CleanWebpackPlugin({
+      cleanStaleWebpackAssets: true,
+    }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       filename: 'index.html',
+      chunks: ['home', 'common'],
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/faq.html',
+      filename: 'faq.html',
+      chunks: ['faq', 'common'],
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/partials/footer.html',
+      filename: 'partials/footer.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/partials/navbar.html',
+      filename: 'partials/navbar.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/partials/notes_carousel.html',
+      filename: 'partials/notes_carousel.html',
     }),
   ],
 

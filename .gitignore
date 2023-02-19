@@ -1,4 +1,5 @@
 /node_modules
+/dist
 .idea/
 .yarn/cache
 .yarn/install-state.gz
