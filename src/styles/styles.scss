@@ -1,0 +1,309 @@
+@import 'bulma/sass/utilities/initial-variables';
+@import 'bulma/sass/utilities/functions';
+@import 'toastify-js/src/toastify.css';
+@import 'swiper/swiper-bundle.min.css';
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700'); // TODO
+
+$theme-background: #001c37;
+$theme-on-background: #d2e4ff;
+$theme-surface: #001c37;
+$theme-surface1: #092541;
+$theme-surface2: #0e2a47;
+$theme-surface3: #142f4d;
+$theme-on-surface: #d2e4ff;
+$theme-success: #00530a;
+$theme-primary: #222a45;
+$theme-dark: #001c37;
+$theme-success-container: #00530a;
+$theme-on-success-container: #96fa89;
+$theme-inverse-surface: #d2e4ff;
+$theme-neutral: #476386;
+$theme-secondary-container: #00487f;
+$theme-on-secondary-container: #d2e4ff;
+$theme-tertiary: #9d396f;
+$theme-on-tertiary: $white;
+$bitcoin: #f7931a;
+$typescript: #3178c6;
+$react-native: #61dafb;
+$fdroid: #62b709;
+
+// Set brand colors
+$link: $theme-primary;
+$text-strong: #001c37;
+
+// Update Bulma's global variables
+$family-sans-serif: 'Roboto', sans-serif;
+//$grey-dark: $brown;
+//$grey-light: $beige-light;
+$primary: $theme-primary;
+
+$widescreen-enabled: true;
+$fullhd-enabled: true;
+
+// Update some of Bulma's component variables
+$body-background-color: #f3f3fa;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Import only what you need from Bulma
+@import 'bulma/sass/utilities/all';
+
+$addColors: (
+  'theme-background': (
+    $theme-background,
+    $theme-on-background,
+  ),
+  'theme-on-background': (
+    $theme-on-background,
+    $theme-on-background,
+  ),
+  // revisar el color del texto
+  'theme-surface':
+    (
+      $theme-surface,
+      $theme-on-surface,
+    ),
+  'theme-surface1': (
+    $theme-surface1,
+    $theme-on-surface,
+  ),
+  'theme-surface2': (
+    $theme-surface2,
+    $theme-on-surface,
+  ),
+  'theme-surface3': (
+    $theme-surface3,
+    $theme-on-surface,
+  ),
+  'theme-on-surface': (
+    $theme-on-surface,
+    $theme-on-surface,
+  ),
+  'theme-success-container': (
+    $theme-success-container,
+    $theme-on-success-container,
+  ),
+  'theme-on-success-container': (
+    $theme-on-success-container,
+    $theme-on-success-container,
+  ),
+  'theme-inverse-surface': (
+    $theme-inverse-surface,
+    $primary,
+  ),
+  'theme-tertiary': (
+    $theme-tertiary,
+    $theme-on-tertiary,
+  ),
+  'theme-on-tertiary': (
+    $theme-on-tertiary,
+    $theme-on-tertiary,
+  ),
+  'theme-secondary-container': (
+    $theme-secondary-container,
+    $theme-on-secondary-container,
+  ),
+  'theme-on-secondary-container': (
+    $theme-on-secondary-container,
+    $theme-on-secondary-container,
+  ),
+  'bitcoin': (
+    $bitcoin,
+    $black,
+  ),
+  'typescript': (
+    $typescript,
+    $white,
+  ),
+  'react-native': (
+    $react-native,
+    $white,
+  ),
+  'fdroid': (
+    $fdroid,
+    $white,
+  ),
+);
+$colors: map-merge($colors, $addColors);
+
+@import 'bulma/sass/base/all';
+@import 'bulma/sass/components/all';
+@import 'bulma/sass/elements/all';
+@import 'bulma/sass/form/all';
+@import 'bulma/sass/grid/all';
+@import 'bulma/sass/helpers/all';
+@import 'bulma/sass/layout/all';
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+.header {
+  height: calc(100vh - 52px);
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  max-width: 300px;
+}
+.copy {
+  cursor: copy;
+}
+// Align carousel images bottom
+.header__note-image {
+}
+.notes-carousel {
+  .swiper-wrapper {
+    align-items: flex-end;
+  }
+  .note-item{
+    display: flex;
+    align-items: flex-end;
+  }
+}
+// .note-item {
+//   height: 350px;
+//   position: relative;
+//   .note-image {
+//     position: absolute;
+//     bottom: 0;
+//   }
+// }
+
+// .header-carousel-bullet {
+//   cursor: pointer;
+// }
+
+.section-has-notes {
+  padding-bottom: 8px !important;
+}
+.notes-image {
+}
+.color-bar-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+//$nostr-sys-light-on-error: #FFFFFF;
+//$nostr-sys-light-error-container: #FFDAD6;
+//$nostr-sys-light-on-tertiary-container: #3D0025;
+//$nostr-sys-light-on-tertiary: #FFFFFF;
+//$nostr-sys-light-tertiary-container: #FFD8E7;
+//$nostr-sys-light-tertiary: #9D396F;
+//$nostr-sys-light-error: #BA1A1A;
+//$nostr-sys-light-outline: #767680;
+//$nostr-sys-light-on-background: #001C37;
+//$nostr-sys-light-background: #FDFCFF;
+//$nostr-sys-light-on-surface-variant: #45464F;
+//$nostr-sys-light-on-surface: #001C37;
+//$nostr-sys-light-surface-variant: #E2E1EC;
+//$nostr-sys-light-surface: #FDFCFF;
+//$nostr-sys-light-on-secondary-container: #001C37;
+//$nostr-sys-light-on-secondary: #FFFFFF;
+//$nostr-sys-light-secondary-container: #D2E4FF;
+//$nostr-sys-light-secondary: #0E61A4;
+//$nostr-sys-light-on-primary-container: #00164D;
+//$nostr-sys-light-on-primary: #FFFFFF;
+//$nostr-sys-light-primary-container: #DCE1FF;
+//$nostr-sys-light-primary: #405AA9;
+//$nostr-sys-dark-on-error-container: #FFDAD6;
+//$nostr-sys-dark-on-error: #690005;
+//$nostr-sys-dark-error-container: #93000A;
+//$nostr-sys-dark-on-tertiary-container: #FFD8E7;
+//$nostr-sys-dark-on-tertiary: #62023F;
+//$nostr-sys-dark-tertiary-container: #7F2056;
+//$nostr-sys-dark-tertiary: #FFAFD2;
+//$nostr-sys-dark-error: #FFB4AB;
+//$nostr-sys-dark-outline: #8F909A;
+//$nostr-sys-dark-on-background: #D2E4FF;
+//$nostr-sys-dark-background: #001C37;
+//$nostr-sys-dark-on-surface-variant: #C6C6D0;
+//$nostr-sys-dark-on-surface: #D2E4FF;
+//$nostr-sys-dark-surface-variant: #45464F;
+//$nostr-sys-dark-surface: #001C37;
+//$nostr-sys-dark-on-secondary-container: #D2E4FF;
+//$nostr-sys-dark-on-secondary: #00325A;
+//$nostr-sys-dark-secondary-container: #00487F;
+//$nostr-sys-dark-secondary: #A1C9FF;
+//$nostr-sys-dark-on-primary-container: #DCE1FF;
+//$nostr-sys-dark-on-primary: #042978;
+//$nostr-sys-dark-primary-container: #264190;
+//$nostr-sys-dark-primary: #B5C4FF;
+//$nostr-ref-error-error0: #000000;
+//$nostr-ref-error-error10: #410002;
+//$nostr-ref-error-error20: #690005;
+//$nostr-ref-error-error30: #93000A;
+//$nostr-ref-error-error40: #BA1A1A;
+//$nostr-ref-error-error50: #DE3730;
+//$nostr-ref-error-error60: #FF5449;
+//$nostr-ref-error-error70: #FF897D;
+//$nostr-ref-error-error80: #FFB4AB;
+//$nostr-ref-error-error90: #FFDAD6;
+//$nostr-ref-error-error95: #FFEDEA;
+//$nostr-ref-error-error99: #FFFBFF;
+//$nostr-ref-error-error100: #FFFFFF;
+//$nostr-ref-primary-primary0: #000000;
+//$nostr-ref-primary-primary10: #00164D;
+//$nostr-ref-primary-primary20: #042978;
+//$nostr-ref-primary-primary30: #264190;
+//$nostr-ref-primary-primary40: #405AA9;
+//$nostr-ref-primary-primary50: #5A73C4;
+//$nostr-ref-primary-primary60: #748DE0;
+//$nostr-ref-primary-primary70: #8FA8FD;
+//$nostr-ref-primary-primary80: #B5C4FF;
+//$nostr-ref-primary-primary90: #DCE1FF;
+//$nostr-ref-primary-primary95: #EFF0FF;
+//$nostr-ref-primary-primary99: #FEFBFF;
+//$nostr-ref-primary-primary100: #FFFFFF;
+//$nostr-ref-secondary-secondary0: #000000;
+//$nostr-ref-secondary-secondary10: #001C37;
+//$nostr-ref-secondary-secondary20: #00325A;
+//$nostr-ref-secondary-secondary30: #00487F;
+//$nostr-ref-secondary-secondary40: #0E61A4;
+//$nostr-ref-secondary-secondary50: #367ABF;
+//$nostr-ref-secondary-secondary60: #5494DB;
+//$nostr-ref-secondary-secondary70: #71AFF7;
+//$nostr-ref-secondary-secondary80: #A1C9FF;
+//$nostr-ref-secondary-secondary90: #D2E4FF;
+//$nostr-ref-secondary-secondary95: #EAF1FF;
+//$nostr-ref-secondary-secondary99: #FDFCFF;
+//$nostr-ref-secondary-secondary100: #FFFFFF;
+//$nostr-surfaces-light-surface1: #FDFCFF;
+//$nostr-surfaces-light-surface2: #FDFCFF;
+//$nostr-surfaces-light-surface3: #FDFCFF;
+//$nostr-surfaces-light-surface4: #FDFCFF;
+//$nostr-surfaces-light-surface5: #FDFCFF;
+//$nostr-surfaces-dark-surface1: #001C37;
+//$nostr-surfaces-dark-surface2: #001C37;
+//$nostr-surfaces-dark-surface3: #001C37;
+//$nostr-surfaces-dark-surface4: #001C37;
+//$nostr-surfaces-dark-surface5: #001C37;
+//$nostr-extended-warning-light-warning: #885200;
+//$nostr-extended-warning-light-on-warning: #FFFFFF;
+//$nostr-extended-warning-light-warning-container: #FFDCBB;
+//$nostr-extended-warning-light-on-warning-container: #2C1700;
+//$nostr-extended-warning-dark-warning: #FFB869;
+//$nostr-extended-warning-dark-on-warning: #482900;
+//$nostr-extended-warning-dark-warning-container: #683D00;
+//$nostr-extended-warning-dark-on-warning-container: #FFDCBB;
+//$nostr-extended-success-light-success: #006E11;
+//$nostr-extended-success-light-on-success: #FFFFFF;
+//$nostr-extended-success-light-success-container: #96FA89;
+//$nostr-extended-success-light-on-success-container: #002202;
+//$nostr-extended-success-dark-success: #7ADC70;
+//$nostr-extended-success-dark-on-success: #003A05;
+//$nostr-extended-success-dark-success-container: #00530A;
+//$nostr-extended-success-dark-on-success-container: #96FA89;
+
+
+@media(max-width: 767px) { /* <== You can change this break point as per your  needs */
+  .reverse-columns {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+}

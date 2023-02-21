@@ -10,9 +10,8 @@ module.exports = {
 
   // Entry point file
   entry: {
-    home: './src/home.js',
-    faq: './src/faq.js',
-    common: './src/common.js',
+    home: './src/entries/home.js',
+    faq: './src/entries/faq.js',
   },
 
   // Output file
@@ -20,8 +19,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
     chunkFilename: '[name].[contenthash].chunk.js', // Cambiar el nombre del archivo de salida del chunk principal
-    // publicPath: isProduction ? './' : '/',
-    publicPath:  '/',
+    publicPath: isProduction ? './' : '/',
+
   },
 
   // Modules and rules to compile and load files
@@ -71,7 +70,7 @@ module.exports = {
 
       // Rule to load image files
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.(png|jpe?g|gif|svg|webp)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'images/[name][ext]',
@@ -108,25 +107,25 @@ module.exports = {
       cleanStaleWebpackAssets: true,
     }),
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
+      template: './src/index.html',
       filename: 'index.html',
-      chunks: ['home', 'common'],
+      chunks: ['home'],
     }),
     new HtmlWebpackPlugin({
-      template: 'src/faq.html',
+      template: './src/faq.html',
       filename: 'faq.html',
-      chunks: ['faq', 'common'],
+      chunks: ['faq'],
     }),
     new HtmlWebpackPlugin({
-      template: 'src/partials/footer.html',
+      template: './src/partials/footer.html',
       filename: 'partials/footer.html',
     }),
     new HtmlWebpackPlugin({
-      template: 'src/partials/navbar.html',
+      template: './src/partials/navbar.html',
       filename: 'partials/navbar.html',
     }),
     new HtmlWebpackPlugin({
-      template: 'src/partials/notes_carousel.html',
+      template: './src/partials/notes_carousel.html',
       filename: 'partials/notes_carousel.html',
     }),
   ],
@@ -165,7 +164,10 @@ module.exports = {
 
   // Development server settings
   devServer: {
-    static: path.join(__dirname, 'dist'),
+    historyApiFallback: true,
+    static: {
+      directory: path.resolve(__dirname, 'dist'),
+    },
     compress: true,
     port: 9000,
   },
