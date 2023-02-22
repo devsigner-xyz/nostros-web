@@ -16,62 +16,91 @@
     <%= require('html-loader!./partials/navbar.html').default %>
 
     <section
-      class="section is-medium has-background-theme-primary-container has-text-centered has-text-theme-on-primary-container"
+      class="section is-medium has-background-theme-primary-container has-text-theme-on-primary-container"
     >
       <div class="container">
-        <h2>About Nostros:</h2>
-        <ul>
-          <li>What is Nostros?</li>
-          <li>Why should I use Nostros instead of other social networks?</li>
-          <li>Is Nostros safe and private?</li>
-          <li>How can I contribute to the Nostros project?</li>
-        </ul>
-      </div>
-      <div>
-        <h2>About creating keys and accessing Nostros:</h2>
-        <ul>
-          <li>What are public and private keys?</li>
-          <li>How do I create my keys to access Nostros?</li>
-          <li>How can I save and protect my private key?</li>
-        </ul>
-      </div>
-      <div>
-        <h2>About publishing content on Nostros:</h2>
-        <ul>
-          <li>How can I publish a note on Nostros?</li>
-          <li>What types of content can I publish on Nostros?</li>
-          <li>How can I mark my content as sensitive?</li>
-          <li>How can I share or quote notes from other people?</li>
-          <li>What are conversation threads in notes?</li>
-        </ul>
-      </div>
-      <div>
-        <h2>About interactions on Nostros:</h2>
-        <ul>
-          <li>How can I reward other people with tips?</li>
-          <li>How can I react to other people's notes?</li>
-          <li>How can I follow or unfollow other people?</li>
-          <li>How can I block other people?</li>
-          <li>How can I send private and encrypted messages?</li>
-        </ul>
-      </div>
-      <div>
-        <h2>About app settings:</h2>
-        <ul>
-          <li>How can I configure my preferred satoshis symbol?</li>
-          <li>How can I show or hide images in the global feed?</li>
-          <li>How can I show or hide notes with sensitive content?</li>
-          <li>How can I manage connections to relays?</li>
-        </ul>
-      </div>
-      <div>
-        <h2>About verification and security:</h2>
-        <ul>
-          <li>What is verification with NIP-05?</li>
-          <li>Why should I verify with NIP-05?</li>
-          <li>How can I add my Lightning Address to my profile?</li>
-          <li>Is Nostros compatible with Tor?</li>
-        </ul>
+        <nav class="panel">
+          <p class="panel-heading">
+            What is Nostros?
+          </p>
+          <div class="panel-block">
+            <ul>
+              <li>Why should I use Nostros instead of other social networks?</li>
+              <li>Is Nostros safe and private?</li>
+              <li>How can I contribute to the Nostros project?</li>
+            </ul>
+          </div>
+        </nav>
+
+        <nav class="panel">
+          <p class="panel-heading">
+            About creating keys and accessing Nostros:
+          </p>
+          <div class="panel-block">
+            <ul>
+              <li>What are public and private keys?</li>
+              <li>How do I create my keys to access Nostros?</li>
+              <li>How can I save and protect my private key?</li>
+            </ul>
+          </div>
+        </nav>
+
+        <nav class="panel">
+          <p class="panel-heading">
+            About publishing content on Nostros:
+          </p>
+          <div class="panel-block">
+            <ul>
+              <li>How can I publish a note on Nostros?</li>
+              <li>What types of content can I publish on Nostros?</li>
+              <li>How can I mark my content as sensitive?</li>
+              <li>How can I share or quote notes from other people?</li>
+              <li>What are conversation threads in notes?</li>
+            </ul>
+          </div>
+        </nav>
+        
+        <nav class="panel">
+          <p class="panel-heading">
+            About interactions on Nostros:
+          </p>
+          <div class="panel-block">
+            <ul>
+              <li>How can I reward other people with tips?</li>
+              <li>How can I react to other people's notes?</li>
+              <li>How can I follow or unfollow other people?</li>
+              <li>How can I block other people?</li>
+              <li>How can I send private and encrypted messages?</li>
+            </ul>
+          </div>
+        </nav>
+        
+        <nav class="panel">
+          <p class="panel-heading">
+            About app settings:
+          </p>
+          <div class="panel-block">
+            <ul>
+              <li>How can I configure my preferred satoshis symbol?</li>
+              <li>How can I show or hide images in the global feed?</li>
+              <li>How can I show or hide notes with sensitive content?</li>
+              <li>How can I manage connections to relays?</li>
+            </ul>
+        </nav>
+
+        <nav class="panel">
+          <p class="panel-heading">
+            About verification and security:
+          </p>
+          <div class="panel-block">
+            <ul>
+              <li>What is verification with NIP-05?</li>
+              <li>Why should I verify with NIP-05?</li>
+              <li>How can I add my Lightning Address to my profile?</li>
+              <li>Is Nostros compatible with Tor?</li>
+            </ul>
+        </nav>
+
       </div>
     </section>
     <%= require('html-loader!./partials/footer.html').default %>

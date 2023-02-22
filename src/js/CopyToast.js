@@ -14,7 +14,7 @@ class CopyToast {
         const element = event.trigger.id;
         switch (element) {
             case 'chat-pubkey':
-                return 'Chat public key copied'
+                return 'Public chat key copied'
             case 'nostros-pubkey':
                 return 'Public key copied'
             case 'nostros-repo':
