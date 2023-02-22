@@ -1,4 +1,4 @@
-const path = require('path');;
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -10,12 +10,12 @@ const pages = [
   {
     template: './src/index.html',
     filename: 'index.html',
-    chunks: ['home']
+    chunks: ['home', 'common'],
   },
   {
     template: './src/faq.html',
     filename: 'faq.html',
-    chunks: ['faq']
+    chunks: ['faq', 'common'],
   },
   {
     template: './src/partials/footer.html',
@@ -30,7 +30,7 @@ const pages = [
     filename: 'partials/notes_carousel.html',
   },
 ];
-const htmlPlugins = pages.map(page => new HtmlWebpackPlugin(page));
+const htmlPlugins = pages.map((page) => new HtmlWebpackPlugin(page));
 
 module.exports = {
   // Webpack mode
@@ -48,13 +48,11 @@ module.exports = {
     filename: '[name].js',
     chunkFilename: '[name].[contenthash].chunk.js', // Cambiar el nombre del archivo de salida del chunk principal
     publicPath: isProduction ? './' : '/',
-
   },
 
   // Modules and rules to compile and load files
   module: {
     rules: [
-      // Rule to compile SCSS files
       // Rule to compile SCSS files
       {
         test: /\.s[ac]ss$/i,

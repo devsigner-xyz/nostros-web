@@ -1,2 +1,2 @@
-import '../js/common/common'
-import '../js/faq/faq'
+import '../js/common/common';
+import '../js/faq/faq';

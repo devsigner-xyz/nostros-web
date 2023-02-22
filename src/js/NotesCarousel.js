@@ -1,7 +1,6 @@
-// core version + navigation, pagination modules:
 import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 
-Swiper.use([Navigation, Pagination, Autoplay]); // Add the modules to Swiper
+Swiper.use([Navigation, Pagination, Autoplay]);
 
 class NotesCarousel {
   constructor() {
@@ -19,7 +18,7 @@ class NotesCarousel {
       loop: true,
       autoplay: {
         delay: 0,
-        disableOnInteraction: true, // para
+        disableOnInteraction: true,
         easing: 'linear',
       },
       speed: 3000,
