@@ -4,6 +4,7 @@ class Modal {
     this.modalTriggers = Array.from(
       document.querySelectorAll('.js-modal-trigger')
     );
+
     this.modalCloses = Array.from(
       document.querySelectorAll(
         '.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button'
@@ -16,7 +17,7 @@ class Modal {
         trigger.addEventListener('click', () => this.openModal(modal));
       }
     });
-    
+
     this.modalCloses.forEach((close) => {
       const modal = close.closest('.modal');
       close.addEventListener('click', () => this.closeModal(modal));

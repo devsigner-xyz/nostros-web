@@ -27,8 +27,6 @@ $text-strong: #001c37;
 
 // Update Bulma's global variables
 $family-sans-serif: 'Roboto', sans-serif;
-//$grey-dark: $brown;
-//$grey-light: $beige-light;
 $primary: $theme-primary;
 
 $widescreen-enabled: true;
@@ -44,59 +42,78 @@ $input-shadow: none;
 @import 'bulma/sass/utilities/all';
 
 $addColors: (
-  'theme-background': ($theme-background,
+  'theme-background': (
+    $theme-background,
     $theme-on-background,
   ),
-  'theme-on-background': ($theme-on-background,
+  'theme-on-background': (
+    $theme-on-background,
     $theme-on-background,
   ),
   // revisar el color del texto
-  'theme-surface': ($theme-surface,
+  'theme-surface':
+    (
+      $theme-surface,
+      $theme-on-surface,
+    ),
+  'theme-surface1': (
+    $theme-surface1,
     $theme-on-surface,
   ),
-  'theme-surface1': ($theme-surface1,
+  'theme-surface2': (
+    $theme-surface2,
     $theme-on-surface,
   ),
-  'theme-surface2': ($theme-surface2,
+  'theme-surface3': (
+    $theme-surface3,
     $theme-on-surface,
   ),
-  'theme-surface3': ($theme-surface3,
+  'theme-on-surface': (
+    $theme-on-surface,
     $theme-on-surface,
   ),
-  'theme-on-surface': ($theme-on-surface,
-    $theme-on-surface,
-  ),
-  'theme-success-container': ($theme-success-container,
+  'theme-success-container': (
+    $theme-success-container,
     $theme-on-success-container,
   ),
-  'theme-on-success-container': ($theme-on-success-container,
+  'theme-on-success-container': (
+    $theme-on-success-container,
     $theme-on-success-container,
   ),
-  'theme-inverse-surface': ($theme-inverse-surface,
+  'theme-inverse-surface': (
+    $theme-inverse-surface,
     $primary,
   ),
-  'theme-tertiary': ($theme-tertiary,
+  'theme-tertiary': (
+    $theme-tertiary,
     $theme-on-tertiary,
   ),
-  'theme-on-tertiary': ($theme-on-tertiary,
+  'theme-on-tertiary': (
+    $theme-on-tertiary,
     $theme-on-tertiary,
   ),
-  'theme-secondary-container': ($theme-secondary-container,
+  'theme-secondary-container': (
+    $theme-secondary-container,
     $theme-on-secondary-container,
   ),
-  'theme-on-secondary-container': ($theme-on-secondary-container,
+  'theme-on-secondary-container': (
+    $theme-on-secondary-container,
     $theme-on-secondary-container,
   ),
-  'bitcoin': ($bitcoin,
+  'bitcoin': (
+    $bitcoin,
     $black,
   ),
-  'typescript': ($typescript,
+  'typescript': (
+    $typescript,
     $white,
   ),
-  'react-native': ($react-native,
+  'react-native': (
+    $react-native,
     $white,
   ),
-  'fdroid': ($fdroid,
+  'fdroid': (
+    $fdroid,
     $white,
   ),
 );

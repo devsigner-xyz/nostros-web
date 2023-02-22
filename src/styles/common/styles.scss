@@ -1,34 +1,31 @@
 @import 'bulma/sass/utilities/initial-variables';
 @import 'bulma/sass/utilities/functions';
-@import 'toastify-js/src/toastify.css';
-@import 'swiper/swiper-bundle.min.css';
 
 @font-face {
   font-family: 'Roboto';
   font-style: regular;
   font-weight: 400;
-  src: url('../fonts/Roboto-Regular.ttf') format('ttf');
+  src: url('../../fonts/Roboto-Regular.ttf') format('ttf');
 }
 
 @font-face {
   font-family: 'Roboto';
   font-style: medium;
   font-weight: 500;
-  src: url('../fonts/Roboto-Medium.ttf') format('ttf');
+  src: url('../../fonts/Roboto-Medium.ttf') format('ttf');
 }
 
 @font-face {
   font-family: 'Roboto';
   font-style: bold;
   font-weight: 700;
-  src: url('../fonts/Roboto-Bold.ttf') format('ttf');
+  src: url('../../fonts/Roboto-Bold.ttf') format('ttf');
 }
 
 @import './custom-variables.scss';
 @import 'bulma/sass/base/all';
 
 // Bulma components
-// @import 'bulma/sass/components/all';
 @import 'bulma/sass/components/card';
 @import 'bulma/sass/components/media';
 @import 'bulma/sass/components/modal';
@@ -44,13 +41,13 @@
 @import 'bulma/sass/elements/tag';
 @import 'bulma/sass/elements/title';
 
-// Bulma elements
+// Bulma form
 @import 'bulma/sass/form/all';
 
-// Bulma elements
+// Bulma grid
 @import 'bulma/sass/grid/columns';
 
-// Bulma elements
+// Bulma helpers
 @import 'bulma/sass/helpers/color';
 @import 'bulma/sass/helpers/flexbox';
 @import 'bulma/sass/helpers/other';
@@ -59,56 +56,18 @@
 @import 'bulma/sass/helpers/typography';
 @import 'bulma/sass/helpers/visibility';
 
-// Bulma elements
+// Bulma layout
 @import 'bulma/sass/layout/all';
 
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 }
 
-.header {
-  height: calc(100vh - 52px);
-  display: flex;
-  align-items: center;
-}
-
-.header__logo {
-  max-width: 300px;
-}
-
 .copy {
   cursor: copy;
 }
 
-.notes-carousel {
-  .swiper-wrapper {
-    align-items: flex-end;
-  }
-
-  .note-item {
-    display: flex;
-    align-items: flex-end;
-  }
-}
-
-.section-has-notes {
-  padding-bottom: 8px !important;
-}
-
-.color-bar-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-.fdroid-image {
-  max-width: 500px;
-  width: 100%;
-}
-
-@media(max-width: 767px) {
-
+@media (max-width: 767px) {
   /* <== You can change this break point as per your  needs */
   .reverse-columns {
     flex-direction: column-reverse;
