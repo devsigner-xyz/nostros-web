@@ -1,9 +1,36 @@
-const path = require('path');
+const path = require('path');;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isProduction = process.env.NODE_ENV === 'production';
+const pages = [
+  {
+    template: './src/index.html',
+    filename: 'index.html',
+    chunks: ['home']
+  },
+  {
+    template: './src/faq.html',
+    filename: 'faq.html',
+    chunks: ['faq']
+  },
+  {
+    template: './src/partials/footer.html',
+    filename: 'partials/footer.html',
+  },
+  {
+    template: './src/partials/navbar.html',
+    filename: 'partials/navbar.html',
+  },
+  {
+    template: './src/partials/notes_carousel.html',
+    filename: 'partials/notes_carousel.html',
+  },
+];
+const htmlPlugins = pages.map(page => new HtmlWebpackPlugin(page));
 
 module.exports = {
   // Webpack mode
@@ -28,10 +55,11 @@ module.exports = {
   module: {
     rules: [
       // Rule to compile SCSS files
+      // Rule to compile SCSS files
       {
         test: /\.s[ac]ss$/i,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'postcss-loader',
@@ -78,19 +106,6 @@ module.exports = {
         },
       },
 
-      // {
-      //   test: /\.(png|jpe?g|gif|svg)$/i,
-      //   use: [
-      //     {
-      //       loader: 'file-loader',
-      //       options: {
-      //         name: '[name].[ext]',
-      //         outputPath: 'images/',
-      //       }
-      //     }
-      //   ]
-      // },
-
       // Rule to load font files
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
@@ -104,6 +119,8 @@ module.exports = {
 
   // Plugins to generate HTML files and enable live reload
   plugins: [
+    ...htmlPlugins,
+    new OptimizeCssAssetsPlugin(),
     new CleanWebpackPlugin({
       cleanStaleWebpackAssets: true,
     }),
@@ -118,27 +135,9 @@ module.exports = {
         },
       ],
     }),
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-      filename: 'index.html',
-      chunks: ['home'],
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/faq.html',
-      filename: 'faq.html',
-      chunks: ['faq'],
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/partials/footer.html',
-      filename: 'partials/footer.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/partials/navbar.html',
-      filename: 'partials/navbar.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/partials/notes_carousel.html',
-      filename: 'partials/notes_carousel.html',
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
     }),
   ],
 
@@ -148,6 +147,7 @@ module.exports = {
     minimizer: [
       new TerserPlugin({
         parallel: true, // Enable parallel processing
+        extractComments: false,
         terserOptions: {
           ecma: 5, // Use ECMAScript 5
           compress: {

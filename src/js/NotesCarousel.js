@@ -1,7 +1,6 @@
 // core version + navigation, pagination modules:
 import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 
-// import Swiper and modules styles
 Swiper.use([Navigation, Pagination, Autoplay]); // Add the modules to Swiper
 
 class NotesCarousel {
