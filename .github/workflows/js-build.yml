@@ -1,4 +1,4 @@
-name: "Lint: Javascript Client"
+name: "Build: Javascript Client"
 
 on:
   # Trigger the workflow on push or pull request,
@@ -6,17 +6,13 @@ on:
   push:
     branches:
       - main
-    paths:
-      - frontend
   pull_request:
     branches:
       - main
-    paths:
-      - frontend
 
 jobs:
-  run-linters:
-    name: Run linters
+  run-build:
+    name: Run build
     runs-on: ubuntu-latest
 
     steps:
@@ -33,7 +29,6 @@ jobs:
       # ESLint and Prettier must be in `package.json`
       - name: 'Install NPM Dependencies'
         run: |
-          cd frontend
           yarn install
 
       - name: Run build
