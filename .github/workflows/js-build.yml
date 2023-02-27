@@ -1,0 +1,36 @@
+name: "Build: Javascript Client"
+
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-build:
+    name: Run build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
+      - name: 'Setup node'
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.17.0
+          cache: yarn
+          cache-dependency-path: frontend/package-lock.json
+
+      # ESLint and Prettier must be in `package.json`
+      - name: 'Install NPM Dependencies'
+        run: |
+          yarn install
+
+      - name: Run build
+        run: |
+          yarn build

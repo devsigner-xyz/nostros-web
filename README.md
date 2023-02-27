@@ -49,6 +49,12 @@ This will open the website in your default browser and watch for changes, automa
 
 This will create a `dist` directory with the optimized, minified, and hashed files ready to be deployed.
 
+## Docker
+
+To start and keep alive the docker instance run:
+
+`docker-compose up -d`
+
 ## Built With
 
 - [Webpack](https://webpack.js.org/)
