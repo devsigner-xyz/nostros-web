@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: 16.17.0
           cache: yarn
-          cache-dependency-path: frontend/package-lock.json
+          cache-dependency-path: ./yarn.lock
 
       # ESLint and Prettier must be in `package.json`
       - name: 'Install NPM Dependencies'
