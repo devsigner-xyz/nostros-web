@@ -16,6 +16,9 @@ FROM nginx:stable-alpine
 
 COPY --from=build /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY /etc/letsencrypt/live/nostros.net/fullchain.pem /certs/server.pem
+COPY /etc/letsencrypt/live/nostros.net/privkey.pem /certs/server.key
 
 EXPOSE 80
+EXPOSE 443
 CMD ["nginx", "-g", "daemon off;"]
