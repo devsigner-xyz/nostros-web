@@ -55,6 +55,8 @@ To start and keep alive the docker instance run:
 
 `docker-compose up -d`
 
+Make sure you created a folder `/certs` with your ssl certificates in project's root.
+
 ## Built With
 
 - [Webpack](https://webpack.js.org/)
