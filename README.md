@@ -55,7 +55,6 @@ To start and keep alive the docker instance run:
 
 `docker-compose up -d`
 
-Make sure you created a folder `/certs` with your ssl certificates in project's root `cp -r /etc/letsencrypt/live/nostros.net ./certs`.
 
 ## Built With
 
