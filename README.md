@@ -57,8 +57,15 @@ To start and keep alive the docker instance run:
 
 To test certbot
 
-`docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ --dry-run -d nostros.net`
+```
+docker-compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ --dry-run -d nostros.net
+```
 
+To set automatic renewal with crontab:
+
+```
+00 00 1 */3 * docker compose run --rm certbot renew
+```
 
 ## Built With
 
