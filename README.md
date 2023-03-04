@@ -55,6 +55,10 @@ To start and keep alive the docker instance run:
 
 `docker-compose up -d`
 
+To test certbot
+
+`docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ --dry-run -d nostros.net`
+
 
 ## Built With
 
