@@ -43,7 +43,7 @@
     "optimize-css-assets-webpack-plugin": "^6.0.1",
     "posthtml": "^0.16.6",
     "posthtml-include": "^1.7.4",
-    "swiper": "^9.0.5",
+    "swiper": "^9.1.0",
     "toastify-js": "^1.12.0"
   }
 }
