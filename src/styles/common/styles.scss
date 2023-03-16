@@ -36,6 +36,7 @@
 @import 'bulma/sass/elements/button';
 @import 'bulma/sass/elements/container';
 @import 'bulma/sass/elements/content';
+@import 'bulma/sass/elements/icon';
 @import 'bulma/sass/elements/image';
 @import 'bulma/sass/elements/other';
 @import 'bulma/sass/elements/tag';
@@ -58,6 +59,10 @@
 
 // Bulma layout
 @import 'bulma/sass/layout/all';
+
+body {
+  overflow-x: hidden;
+}
 
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;

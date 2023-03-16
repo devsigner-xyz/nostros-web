@@ -6,7 +6,9 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <%= require('html-loader!./partials/meta_tags.html').default %>
   <title>Nostros, a nostr client for Android</title>
+  <%= require('html-loader!./partials/json_ld.html').default %>
 </head>
 
 <body>
@@ -14,7 +16,7 @@
     <div class="hero-body is-flex is-flex-direction-column is-align-items-center is-justify-content-center">
 
       <div class="block">
-        <img class="hero__logo has-ratio" width="3183" height="633" src="./images/nostros-horizontal.svg" alt="" />
+        <img class="hero__logo has-ratio" width="300" height="60" src="./images/nostros-horizontal.svg" alt="" />
       </div>
 
       <div class="block">
@@ -68,12 +70,23 @@
           <span class="material-symbols-outlined">&#xef76;</span>
           <span>&nbsp;NIP-05</span>
         </span>
+      </div>
 
+      <div class="tags are-medium is-centered">
         <span class="tag is-rounded is-theme-surface1">
           <span class="material-symbols-outlined">&#xe0e6;</span>
           <span>&nbsp;Mentions</span>
         </span>
 
+        <span class="tag is-rounded is-theme-surface1">
+          <span class="material-symbols-outlined">&#xe8b6;</span>
+          <span>&nbsp;Search</span>
+        </span>
+
+        <span class="tag is-rounded is-theme-surface1">
+          <span class="material-symbols-outlined">&#xf0c1;</span>
+          <span>&nbsp;Relay list metadata</span>
+        </span>
       </div>
 
       <div class="tags are-medium is-centered">
@@ -112,7 +125,7 @@
       </div>
     </div>
     <%= require('html-loader!./partials/notes_carousel.html').default %>
-      <div id="colorBarContainer" class="color-bar-container"></div>
+    <div id="colorBarContainer" class="color-bar-container"></div>
 
   </section>
 
@@ -137,7 +150,7 @@
             <div class="block">
               <div class="buttons">
                 <a href="https://f-droid.org/" class="button is-success">Download F-Droid</a>
-                <a class="button is-text" href="https://github.com/KoalaSat/nostros/releases" target="_blank">Download from
+                <a class="button is-dark" href="https://github.com/KoalaSat/nostros/releases" target="_blank">Download from
                   GitHub</a>
               </div>
             </div>
@@ -147,12 +160,12 @@
 
           <div class="columns is-multiline">
 
-            <div class="column is-half-tablet is-one-third-desktop is-flex">
+            <div class="column is-half-tablet is-flex">
               <div class="card is-flex-grow-1">
                 <div class="card-content">
                   <div class="content">
                     <h5 class="title is-5">01.</h5>
-                    <p class="is-size-7">
+                    <p class="is-size-6">
                       <a class="is-link" href="https://f-droid.org/" target="_blank">Download</a> and open the F-Droid
                       app on your Android device.
                     </p>
@@ -161,12 +174,12 @@
               </div>
             </div>
 
-            <div class="column is-half-tablet is-one-third-desktop is-flex">
+            <div class="column is-half-tablet is-flex">
               <div class="card is-flex-grow-1">
                 <div class="card-content">
                   <div class="content">
                     <h5 class="title is-5">02.</h5>
-                    <p class="is-size-7">
+                    <p class="is-size-6">
                       Go to "Settings"
                     </p>
                   </div>
@@ -174,12 +187,12 @@
               </div>
             </div>
 
-            <div class="column is-half-tablet is-one-third-desktop is-flex">
+            <div class="column is-half-tablet is-flex">
               <div class="card is-flex-grow-1">
                 <div class="card-content">
                   <div class="content">
                     <h5 class="title is-5">03.</h5>
-                    <p class="is-size-7">
+                    <p class="is-size-6">
                       Select "Manage repositories" and add new repository.
                     </p>
                   </div>
@@ -187,12 +200,12 @@
               </div>
             </div>
 
-            <div class="column is-half-tablet is-one-third-desktop is-flex">
+            <div class="column is-half-tablet is-flex">
               <div class="card is-flex-grow-1">
                 <div class="card-content">
                   <div class="content">
                     <h5 class="title is-5">04.</h5>
-                    <p class="is-size-7">
+                    <p class="is-size-6">
                       Add IzzySoft repository adrress (below) and confirm.
                     </p>
                   </div>
@@ -200,12 +213,12 @@
               </div>
             </div>
 
-            <div class="column is-half-tablet is-one-third-desktop is-flex">
+            <div class="column is-half-tablet is-flex">
               <div class="card is-flex-grow-1">
                 <div class="card-content">
                   <div class="content">
                     <h5 class="title is-5">05.</h5>
-                    <p class="is-size-7">
+                    <p class="is-size-6">
                       Search for "Nostros" in the F-Droid search bar.
                     </p>
                   </div>
@@ -213,12 +226,12 @@
               </div>
             </div>
 
-            <div class="column is-half-tablet is-one-third-desktop is-flex">
+            <div class="column is-half-tablet is-flex">
               <div class="card is-flex-grow-1">
                 <div class="card-content">
                   <div class="content">
                     <h5 class="title is-5">06.</h5>
-                    <p class="is-size-7">
+                    <p class="is-size-6">
                       Install Nostros
                     </p>
                   </div>
@@ -369,8 +382,7 @@
                   <h5 class="title is-5 has-text-theme-on-surface">Zaps</h5>
                 </div>
                 <p class="has-text-theme-on-surface">
-                  Send tips in the form of Bitcoin through Lightning Network's
-                  integration with nostr.
+                  Send zaps in the form of Bitcoin through Lightning Network's, publicly or privately.
                 </p>
               </div>
             </div>
@@ -396,6 +408,25 @@
           </div>
         </div>
 
+        <div class="column is-half-tablet is-one-third-desktop">
+          <div class="card has-background-theme-surface1 has-text-theme-on-surface">
+            <div class="card-content">
+              <div class="content">
+                <div class="is-flex is-flex-direction-row">
+                  <span class="material-symbols-outlined mr-3">&#xe8b6;</span>
+                  <h5 class="title is-5 has-text-theme-on-surface">
+                    Search
+                  </h5>
+                </div>
+                <p class="has-text-theme-on-surface">
+                  Search for other people in nostr with their username or public key. 
+                  Find notes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="column is-one-third-desktop">
           <div class="card has-background-theme-success-container has-text-theme-on-success-container">
             <div class="card-content">
@@ -414,7 +445,91 @@
             </div>
           </div>
         </div>
+      </div>
 
+      <div class="block">
+        <div class="block has-text-centered mt-6">
+          <h3 class="title is-4 has-text-weight-bold has-text-centered has-text-theme-on-background">
+            Other features
+          </h3>
+        </div>
+  
+        <div class="columns is-multiline">
+          <div class="column is-one-third-desktop">
+            <div class="icon-text">
+              <span class="icon has-text-success">
+                <span class="material-symbols-outlined has-text-bitcoin mr-3">&#xe876;</span>
+              </span>
+              <span class="has-text-light">Notification center</span>
+            </div>
+            <div class="icon-text">
+              <span class="icon has-text-success">
+                <span class="material-symbols-outlined has-text-bitcoin mr-3">&#xe876;</span>
+              </span>
+              <span class="has-text-light">Search hashtags</span>
+            </div>
+            <div class="icon-text">
+              <span class="icon has-text-success">
+                <span class="material-symbols-outlined has-text-bitcoin mr-3">&#xe876;</span>
+              </span>
+              <span class="has-text-light">Public and private booksmarks</span>
+            </div>
+            <div class="icon-text">
+              <span class="icon has-text-success">
+                <span class="material-symbols-outlined has-text-bitcoin mr-3">&#xe876;</span>
+              </span>
+              <span class="has-text-light">See relays in notes</span>
+            </div>
+          </div>
+          <div class="column is-one-third-desktop">
+            <div class="icon-text">
+              <span class="icon has-text-success">
+                <span class="material-symbols-outlined has-text-bitcoin mr-3">&#xe876;</span>
+              </span>
+              <span class="has-text-light">Relay list metadata</span>
+            </div>
+            <div class="icon-text">
+              <span class="icon has-text-success">
+                <span class="material-symbols-outlined has-text-bitcoin mr-3">&#xe876;</span>
+              </span>
+              <span class="has-text-light">Tag paid relays</span>
+            </div>
+            <div class="icon-text">
+              <span class="icon has-text-success">
+                <span class="material-symbols-outlined has-text-bitcoin mr-3">&#xe876;</span>
+              </span>
+              <span class="has-text-light">Silence people</span>
+            </div>
+            <div class="icon-text">
+              <span class="icon has-text-success">
+                <span class="material-symbols-outlined has-text-bitcoin mr-3">&#xe876;</span>
+              </span>
+              <span class="has-text-light">Sign notes with Bitcoin block height</span>
+            </div>
+            
+          </div>
+          <div class="column is-one-third-desktop">
+            <div class="icon-text">
+              <span class="icon has-text-success">
+                <span class="material-symbols-outlined has-text-bitcoin mr-3">&#xe876;</span>
+              </span>
+              <span class="has-text-light">Video player</span>
+            </div>
+            <div class="icon-text">
+              <span class="icon has-text-success">
+                <span class="material-symbols-outlined has-text-bitcoin mr-3">&#xe876;</span>
+              </span>
+              <span class="has-text-light">Image gallery</span>
+            </div>
+            <div class="icon-text">
+              <span class="icon has-text-success">
+                <span class="material-symbols-outlined has-text-bitcoin mr-3">&#xe876;</span>
+              </span>
+              <span class="has-text-light">Most zapped notes</span>
+            </div>
+          </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
