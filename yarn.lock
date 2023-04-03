@@ -4695,10 +4695,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"material-symbols@npm:^0.4.6":
-  version: 0.4.6
-  resolution: "material-symbols@npm:0.4.6"
-  checksum: f6bd021130acd5376e4d98d786bdb0329093354717875b5cd7263c19101ce2777c04d3ec172692ad3ae77a61972ca12633d74f1455ad6df081199ba8f7f76ab5
+"material-symbols@npm:^0.5.5":
+  version: 0.5.5
+  resolution: "material-symbols@npm:0.5.5"
+  checksum: 77ec4b8b63771cf831a47b9867675d2b5b77bfd2ad5a4c72b455e38187321215b479d13ceaa9527bce125b6e82224421eb3a6bbec01ab4cd964f3fa06160f56a
   languageName: node
   linkType: hard
 
@@ -5222,7 +5222,7 @@ __metadata:
     html-webpack-plugin: ^5.5.0
     html-webpack-template: ^6.2.0
     lodash: ^4.17.21
-    material-symbols: ^0.4.6
+    material-symbols: ^0.5.5
     mini-css-extract-plugin: ^2.7.3
     node-sass: ^8.0.0
     optimize-css-assets-webpack-plugin: ^6.0.1
