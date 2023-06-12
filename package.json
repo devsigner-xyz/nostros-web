@@ -39,7 +39,7 @@
     "html-loader": "^4.2.0",
     "html-webpack-template": "^6.2.0",
     "lodash": "^4.17.21",
-    "material-symbols": "^0.4.6",
+    "material-symbols": "^0.7.0",
     "optimize-css-assets-webpack-plugin": "^6.0.1",
     "posthtml": "^0.16.6",
     "posthtml-include": "^1.7.4",
