@@ -7,6 +7,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - '80:80'
+      - '8080:8080'
       - '443:443'
     restart: always
     volumes:
@@ -22,8 +23,6 @@ services:
     volumes:
       - ./tor:/var/lib/tor
       - ./torrc:/etc/tor/torrc
-    ports:
-      - 8080:8080
   certbot:
     image: certbot/certbot:latest
     restart: always
