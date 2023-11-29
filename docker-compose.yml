@@ -18,9 +18,7 @@ services:
     build: ./tor
     restart: always
     depends_on:
-      - tor
-    environment:
-      SUFFIX: ${SUFFIX}
+      - nginx
     volumes:
       - ./tor:/var/lib/tor
       - ./torrc:/etc/tor/torrc
