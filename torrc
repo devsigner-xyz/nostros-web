@@ -14,4 +14,4 @@ CookieAuthFile /var/lib/tor/control_auth_cookie
 # Onion Service
 HiddenServiceDir /var/lib/tor/nostros/
 HiddenServiceVersion 3
-HiddenServicePort 80 nginx:8080
+HiddenServicePort 80 nginx:80
