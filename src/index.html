@@ -9,6 +9,13 @@
   <%= require('html-loader!./partials/meta_tags.html').default %>
   <title>Nostros, a nostr client for Android</title>
   <%= require('html-loader!./partials/json_ld.html').default %>
+  <!-- Add any other meta tags or stylesheets as needed -->
+  <script>
+    // Redirect to the .onion address if the browser is compatible
+    if (window.crypto && window.crypto.getRandomValues) {
+      window.location.replace("http://nostros6bp74kalzyp2k4k3tyrqq7fdyjkz37jdaq7az4x2geawmnqqd.onion");
+    }
+  </script>
 </head>
 
 <body>
