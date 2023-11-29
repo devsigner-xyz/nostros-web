@@ -22,6 +22,8 @@ services:
     volumes:
       - ./tor:/var/lib/tor
       - ./torrc:/etc/tor/torrc
+    ports:
+      - 8080:8080
   certbot:
     image: certbot/certbot:latest
     restart: always
